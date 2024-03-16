@@ -19,4 +19,4 @@ A step-by-step series of examples that tell you how to get a development environ
 1. Clone the repository to your local machine:
 
 ```bash
-git clone https://yourrepositorylink.git
+git clone 
