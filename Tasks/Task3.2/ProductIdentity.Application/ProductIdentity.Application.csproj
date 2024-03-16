@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ProductIdentity.Dtos\ProductIdentity.Dtos.csproj" />
-    <ProjectReference Include="..\ProductIdentity.Models\ProductIdentity.Models.csproj" />
   </ItemGroup>
 
 </Project>

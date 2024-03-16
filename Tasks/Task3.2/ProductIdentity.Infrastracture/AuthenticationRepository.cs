@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using ProductIdentity.Dtos;
 using ProductIdentity.Infrastracture.Interface;
 using ProductIdentity.Models;
 using System.IdentityModel.Tokens.Jwt;
@@ -15,6 +16,7 @@ public class AuthenticationRepository : IAuthenticationRepository
     private readonly IConfiguration _configuration;
     private readonly RoleManager<IdentityRole> _roleManager;
 
+    private User? _user;
     public AuthenticationRepository(UserManager<User> userManager, IConfiguration configuration, RoleManager<IdentityRole> roleManager)
     {
         _userManager = userManager;
@@ -59,6 +61,20 @@ public class AuthenticationRepository : IAuthenticationRepository
         }
 
         return result;
+    }
+
+    public async Task<bool> AuthenticateAsync(UserAuthenticationDto userAuthenticationDto)
+    {
+        _user = await _userManager.FindByNameAsync(userAuthenticationDto.UserName);
+
+        var result = (_user !=null && await _userManager.CheckPasswordAsync(_user, userAuthenticationDto.Password));
+
+        if (!result)
+        {
+            return false;
+        }
+
+        return result; 
     }
 
 
