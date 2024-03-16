@@ -71,6 +71,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductLogging.Models", "Ta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductLogging.Application", "Tasks\Task3.3\ProductLogging.Application\ProductLogging.Application.csproj", "{F60C698C-FD04-4C31-81FF-A4956F2FB522}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductLogging.Dtos", "Tasks\Task3.3\ProductLogging.Dtos\ProductLogging.Dtos.csproj", "{5D459C69-6C1B-4A7A-83FF-C23978787D02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,10 @@ Global
 		{F60C698C-FD04-4C31-81FF-A4956F2FB522}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F60C698C-FD04-4C31-81FF-A4956F2FB522}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F60C698C-FD04-4C31-81FF-A4956F2FB522}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D459C69-6C1B-4A7A-83FF-C23978787D02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D459C69-6C1B-4A7A-83FF-C23978787D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D459C69-6C1B-4A7A-83FF-C23978787D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D459C69-6C1B-4A7A-83FF-C23978787D02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -203,6 +209,7 @@ Global
 		{862770BA-55F9-4330-AF52-60ECA1622CA9} = {33902330-82C6-4874-AFEC-16575D009DA4}
 		{4D50283A-1CB2-439E-9E2B-D957E0DFD98D} = {33902330-82C6-4874-AFEC-16575D009DA4}
 		{F60C698C-FD04-4C31-81FF-A4956F2FB522} = {33902330-82C6-4874-AFEC-16575D009DA4}
+		{5D459C69-6C1B-4A7A-83FF-C23978787D02} = {33902330-82C6-4874-AFEC-16575D009DA4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {72C4A4DD-8212-46EE-93FF-A6FE33C15678}
