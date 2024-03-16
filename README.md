@@ -114,7 +114,7 @@ Follow these instructions to get the project up and running on your local machin
 
 ### Prerequisites
 
-- .NET 6 SDK
+- .NET 6 SDK or later
 
 ### Installation
 
