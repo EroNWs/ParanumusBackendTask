@@ -7,11 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="NLog.Extensions.Logging" Version="5.3.8" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ProductLogging.Dtos\ProductLogging.Dtos.csproj" />
+    <ProjectReference Include="..\ProductLogging.Infrastracture.Interface\ProductLogging.Infrastracture.Interface.csproj" />
+    <ProjectReference Include="..\ProductLogging.Models\ProductLogging.Models.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using NLog;
 using ProductIdentity.DAL;
 using ProductLogging.Infrastracture.Extensions;
+using ProductLogging.Application.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +12,7 @@ LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nl
 
 // Add services to the container.
 builder.Services.AddDbContext<ProductIdentityDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ProductDb")));
-
+builder.Services.AddServiceExtensions();
 builder.Services.AddInfrastractureExtensions();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

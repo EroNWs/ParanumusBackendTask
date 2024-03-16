@@ -9,7 +9,6 @@ public class ProductRepository : IProductRepository
 {
     private readonly ProductLoggingDbContext _context;
 
-
     public ProductRepository(ProductLoggingDbContext context)
     {
         _context = context;
