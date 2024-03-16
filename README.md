@@ -25,7 +25,7 @@ git clone https://github.com/EroNWs/ParanumusBackendTask.git
 
 ## Navigate to the project directory:
 ```bash
-cd HelloWorldMinimalApi
+cd HelloWorldMinimalApi projects location
 ```
 
 ## Run the project:
@@ -76,7 +76,7 @@ git clone https://github.com/EroNWs/ParanumusBackendTask.git
 
 ## Navigate to the project directory:
 ```bash
-cd CalculateAverageMinimalApi
+cd CalculateAverageMinimalApi projects location
 ```
 
 ## Run the application:
@@ -93,3 +93,65 @@ https://localhost:5001/calculateaverage?numbers=10,20,30,40
 
 The service will respond with the average of the provided numbers.
 
+------
+# In-Memory CRUD Operations for Product Resource with Minimal API
+
+This project demonstrates a simple yet effective way to implement CRUD operations for a Product resource using ASP.NET Core's Minimal API feature. It utilizes an in-memory list to store product data, making it a great starting point for understanding how to work with Minimal APIs.
+
+## Features
+
+- Create, Read, Update, and Delete operations for Product resource.
+- In-memory data storage.
+- Error handling for null or empty inputs and incorrect formats.
+- User-friendly error messages.
+
+## Getting Started
+
+Follow these instructions to get the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+- .NET 6 SDK
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/EroNWs/ParanumusBackendTask.git
+```
+
+## Navigate to the project directory:
+```bash
+cd ProductCatalogApi project location
+```
+
+## Run the application:
+```bash
+dotnet run
+```
+
+Usage
+Once the application is running, you can perform CRUD operations on the Product resource using the following endpoints:
+
+### Create a Product: POST /products
+Body: {"Id": 1, "Name": "Product Name", "Description": "Product Description", "Price": 100}
+```bash
+curl -k -X POST https://localhost:5002/products -H "Content-Type: application/json" -d "{\"Id\": 2, \"Name\": \"Ürün Adı\", \"Description\": \"Ürün Açıklaması\", \"Price\": 100}"
+```
+### Read All Products: GET /products
+```bash
+curl https://localhost:5002/products
+```
+### Read a Product by ID: GET /products/{id}
+```bash
+curl https://localhost:5002/products/1
+```
+### Update a Product: PUT /products/{id}
+Body: {"Id": 1, "Name": "Updated Product Name", "Description": "Updated Product Description", "Price": 150}
+```bash
+curl -X PUT https://localhost:5002/products/1 -H "Content-Type: application/json" -d "{\"Id\": 1, \"Name\": \"Yeni Ürün Adı\", \"Description\": \"Yeni Ürün Açıklaması\", \"Price\": 150}"
+```
+### Delete a Product: DELETE /products/{id}
+```bash
+curl -X DELETE https://localhost:5002/products/2
+```
