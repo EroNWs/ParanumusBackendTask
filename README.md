@@ -20,21 +20,24 @@ A step-by-step series of examples that tell you how to get a development environ
 
 ```bash
 git clone https://github.com/EroNWs/ParanumusBackendTask.git
-
+```
 ---------
 
 ## Navigate to the project directory:
 ```bash
 cd HelloWorldMinimalApi
+```
 
 ## Run the project:
 ```bash
 dotnet run
+```
 
 This will start the application on https://localhost:5000. You can access the application via a web browser or using a tool like curl:
 
 ```bash
 curl https://localhost:5000
+```
 
 ## You should see the response:
 Hello World
@@ -65,14 +68,17 @@ To get a local copy up and running follow these simple steps.
 1. Clone the repository:
 ```bash
 git clone https://github.com/EroNWs/ParanumusBackendTask.git
+```
 
 ## Navigate to the project directory:
 ```bash
 cd CalculateAverageMinimalApi
+```
 
 ## Run the application:
 ```bash
 dotnet run
+```
 
 ## Access the application:
 Access the web service by navigating to https://localhost:5001/calculateaverage?numbers=1,2,3 in your web browser or using a tool like curl or Postman, replacing 1,2,3 with your series of integers.
