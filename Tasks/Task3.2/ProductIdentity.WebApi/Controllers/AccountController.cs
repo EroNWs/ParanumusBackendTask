@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ProductIdentity.Dtos;
+using ProductIdentity.Infrastracture.Interface;
 using ProductIdentity.Models;
 
 namespace ProductIdentity.WebApi.Controllers
@@ -10,10 +11,12 @@ namespace ProductIdentity.WebApi.Controllers
     public class AccountController : ControllerBase
     {   
         private readonly UserManager<User> _userManager;
+        private readonly IAuthenticationRepository _authenticationRepository;
 
-        public AccountController(UserManager<User> userManager)
-        {   
+        public AccountController(UserManager<User> userManager, IAuthenticationRepository authenticationRepository)
+        {
             _userManager = userManager;
+            _authenticationRepository = authenticationRepository;
         }
 
         [HttpPost("register")]
@@ -39,7 +42,7 @@ namespace ProductIdentity.WebApi.Controllers
 
             };
 
-            var result = await _userManager.CreateAsync(user, model.Password);
+            var result = await _authenticationRepository.RegisterUser(user, model.Password, model.Roles);
 
             if (!result.Succeeded)
             {

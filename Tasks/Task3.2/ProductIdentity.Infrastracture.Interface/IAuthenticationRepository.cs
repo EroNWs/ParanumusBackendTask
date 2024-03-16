@@ -5,5 +5,6 @@ namespace ProductIdentity.Infrastracture.Interface;
 
 public interface IAuthenticationRepository
 {
-    Task<IdentityResult> RegisterUser(User user);
+    Task<string> GenerateJwtToken(User user);
+    Task<IdentityResult> RegisterUser(User user, string password, List<string> roles);
 }

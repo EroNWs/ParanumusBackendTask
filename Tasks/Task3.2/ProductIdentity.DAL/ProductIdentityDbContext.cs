@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using ProductIdentity.Models;
+using System.Reflection;
 
 namespace ProductIdentity.DAL;
 
@@ -16,7 +17,7 @@ public class ProductIdentityDbContext :IdentityDbContext<User>
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-        builder.ApplyConfiguration(new RoleConfiguration());
+        builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
     }
 
