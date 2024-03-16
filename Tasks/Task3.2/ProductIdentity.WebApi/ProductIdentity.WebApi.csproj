@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ProductIdentity.DAL\ProductIdentity.DAL.csproj" />
+    <ProjectReference Include="..\ProductIdentity.Dtos\ProductIdentity.Dtos.csproj" />
     <ProjectReference Include="..\ProductIdentity.Infrastracture.Interface\ProductIdentity.Infrastracture.Interface.csproj" />
     <ProjectReference Include="..\ProductIdentity.Infrastracture\ProductIdentity.Infrastracture.csproj" />
     <ProjectReference Include="..\ProductIdentity.Models\ProductIdentity.Models.csproj" />

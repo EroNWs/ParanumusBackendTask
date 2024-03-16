@@ -11,7 +11,8 @@ public static class RepositoryExtensions
     public static IServiceCollection AddInfrastractureExtensions(this IServiceCollection services)
     {
         services.AddScoped<IProductRepository, ProductRepository>();
-
+        services.AddScoped<IAuthenticationRepository, AuthenticationRepository>();
+       
         return services;
     }
     public static IServiceCollection ConfigureIdentity(this IServiceCollection services)
