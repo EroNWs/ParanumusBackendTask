@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using ProductCatalogAsyncWithSql.Infrastracture.Interface;
-using ProductCatalogAsyncWithSql.Models;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using ProductIdentity.Infrastracture.Interface;
+using ProductIdentity.Models;
 
-namespace ProductCatalogAsyncWithSql.WebApi.Controllers;
+namespace ProductIdentity.WebApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
