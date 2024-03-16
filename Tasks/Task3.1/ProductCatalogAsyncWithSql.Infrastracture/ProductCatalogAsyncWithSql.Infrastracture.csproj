@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ProductCatalogAsyncWithSql.DAL\ProductCatalogAsyncWithSql.DAL.csproj" />
+    <ProjectReference Include="..\ProductCatalogAsyncWithSql.Infrastracture.Interface\ProductCatalogAsyncWithSql.Infrastracture.Interface.csproj" />
+  </ItemGroup>
+
 </Project>

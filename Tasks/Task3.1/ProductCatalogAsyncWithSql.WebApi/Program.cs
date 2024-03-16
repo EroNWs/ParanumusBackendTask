@@ -1,6 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using ProductCatalogAsyncWithSql.DAL.Contexts;
+using ProductCatalogAsyncWithSql.Infrastracture.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<ProductCatalogDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ProductDb")));
+
+builder.Services.AddInfrastractureExtensions();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

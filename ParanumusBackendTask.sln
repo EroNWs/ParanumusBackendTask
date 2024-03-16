@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalogAsyncWithSql.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalogAsyncWithSql.Infrastracture.Interface", "Tasks\Task3.1\ProductCatalogAsyncWithSql.Infrastracture.Interface\ProductCatalogAsyncWithSql.Infrastracture.Interface.csproj", "{C5FF289A-1AFB-4D10-A75F-0FB970FBFB7E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalogAsyncWithSql.DAL", "Tasks\Task3.1\ProductCatalogAsyncWithSql.DAL\ProductCatalogAsyncWithSql.DAL.csproj", "{24B555E1-6501-4C0E-B407-24D8762C9AF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{C5FF289A-1AFB-4D10-A75F-0FB970FBFB7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5FF289A-1AFB-4D10-A75F-0FB970FBFB7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5FF289A-1AFB-4D10-A75F-0FB970FBFB7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24B555E1-6501-4C0E-B407-24D8762C9AF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24B555E1-6501-4C0E-B407-24D8762C9AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24B555E1-6501-4C0E-B407-24D8762C9AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24B555E1-6501-4C0E-B407-24D8762C9AF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +99,7 @@ Global
 		{D7E41218-6CB8-428B-AF90-8111870A594F} = {7453120A-BCE2-4E7F-8E9B-3933C33AF84C}
 		{6831EAF9-3EA9-4061-ADB4-10F3EB216C56} = {7453120A-BCE2-4E7F-8E9B-3933C33AF84C}
 		{C5FF289A-1AFB-4D10-A75F-0FB970FBFB7E} = {7453120A-BCE2-4E7F-8E9B-3933C33AF84C}
+		{24B555E1-6501-4C0E-B407-24D8762C9AF5} = {7453120A-BCE2-4E7F-8E9B-3933C33AF84C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {72C4A4DD-8212-46EE-93FF-A6FE33C15678}
