@@ -55,5 +55,19 @@ namespace ProductIdentity.WebApi.Controllers
 
             return Ok(new { Message = "User registered successfully" });
         }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Authenticate([FromBody]UserAuthenticationDto userAuthenticationDto)
+        {
+            if(!await _authenticationRepository.AuthenticateAsync(userAuthenticationDto))
+                return Unauthorized();
+            return Ok(
+                new
+                {
+                    Token = await _authenticationRepository.CreateToken()
+                }) ;
+        }
+
+
     }
 }
