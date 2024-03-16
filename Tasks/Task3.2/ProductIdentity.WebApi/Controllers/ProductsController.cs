@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProductIdentity.Infrastracture.Interface;
 using ProductIdentity.Models;
@@ -19,7 +20,7 @@ public class ProductsController : ControllerBase
 
     // GET: api/Products
     [HttpGet]
-    
+    [AllowAnonymous]
     public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
     {
         var products = await _productRepository.GetAllAsync();
@@ -28,6 +29,7 @@ public class ProductsController : ControllerBase
 
     // GET: api/Products/5
     [HttpGet("{id}")]
+    [AllowAnonymous]
     public async Task<ActionResult<Product>> GetProduct(int id)
     {
         var product = await _productRepository.GetByIdAsync(id);
@@ -42,6 +44,7 @@ public class ProductsController : ControllerBase
 
     // POST: api/Products
     [HttpPost]
+    [Authorize]
     public async Task<ActionResult<Product>> PostProduct(Product product)
     {
         await _productRepository.AddAsync(product);
@@ -51,6 +54,7 @@ public class ProductsController : ControllerBase
 
     // PUT: api/Products/5
     [HttpPut("{id}")]
+    [Authorize]
     public async Task<IActionResult> PutProduct(int id, Product product)
     {
         if (id != product.Id)
@@ -65,6 +69,7 @@ public class ProductsController : ControllerBase
 
     // DELETE: api/Products/5
     [HttpDelete("{id}")]
+    [Authorize]
     public async Task<IActionResult> DeleteProduct(int id)
     {
         var product = await _productRepository.GetByIdAsync(id);

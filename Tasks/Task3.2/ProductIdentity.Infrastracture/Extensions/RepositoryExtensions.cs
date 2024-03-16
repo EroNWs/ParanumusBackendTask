@@ -1,8 +1,12 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using ProductIdentity.DAL;
 using ProductIdentity.Infrastracture.Interface;
 using ProductIdentity.Models;
+using System.Text;
 
 namespace ProductIdentity.Infrastracture.Extensions;
 
@@ -30,5 +34,26 @@ public static class RepositoryExtensions
         .AddDefaultTokenProviders();
 
         return services;
+    }
+
+    public static void ConfigureJWT(this IServiceCollection services,IConfiguration configuration)
+    {
+        var jwtSettings = configuration.GetSection("Jwt");
+        var secretKey = jwtSettings["Key"];
+
+        services.AddAuthentication(options =>
+        {
+            options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        }).AddJwtBearer(options =>options.TokenValidationParameters = new TokenValidationParameters
+        {
+      ValidateIssuer = true,
+      ValidateAudience = true,
+      ValidateLifetime = true,
+      ValidIssuer = jwtSettings["Issuer"],
+      ValidAudience = jwtSettings["Audience"],
+      IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
+
+        });
     }
 }
