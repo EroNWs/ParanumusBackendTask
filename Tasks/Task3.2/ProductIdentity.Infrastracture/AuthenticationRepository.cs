@@ -77,5 +77,48 @@ public class AuthenticationRepository : IAuthenticationRepository
         return result; 
     }
 
+    public async Task<string> CreateToken()
+    {
+        var signinCredentials = GetSignInCredentials();
+            var claims = await GetClaims();
+        var tokenOptions = GenerateTokenOptions(signinCredentials, claims);
+        return new JwtSecurityTokenHandler().WriteToken(tokenOptions);
+    }
+
+    private SigningCredentials GetSignInCredentials()
+    {
+        var jwtSettings = _configuration.GetSection("Jwt");
+        var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]);
+        var secret = new SymmetricSecurityKey(key);
+        return new SigningCredentials(secret,SecurityAlgorithms.HmacSha256);
+    }
+
+    private async Task<List<Claim>> GetClaims()
+    {
+        var claims = new List<Claim>()
+        {
+            new Claim(ClaimTypes.Name, _user.UserName)
+        };
+        var roles = await _userManager.GetRolesAsync(_user);
+
+        foreach (var role in roles)
+        {
+            claims.Add(new Claim (ClaimTypes.Role, role));
+        }
+        return claims;
+    }
+
+    private JwtSecurityToken GenerateTokenOptions(SigningCredentials signingCredentials, List<Claim> claims)
+    {
+        var jwtSettings = _configuration.GetSection("Jwt");
+        var tokenOptions = new JwtSecurityToken(
+            issuer: jwtSettings["Issuer"],
+            audience: jwtSettings["Audience"],
+            claims: claims,
+            expires: DateTime.Now.AddMinutes(Convert.ToDouble(jwtSettings["expires"])),
+            signingCredentials: signingCredentials
+            );
+        return tokenOptions;
+    }
 
 }
