@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34219.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tasks", "Tasks", "{BE3E844F-4C0A-4A87-8C1F-C7AF3DA72CC9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task1", "Task1", "{AF261949-55F0-4623-97F4-8F06CA0B904C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task1.1", "Task1.1", "{94BBDE25-9029-4E87-B060-1BD0E3149623}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldMinimalApi", "Tasks\Task1.1\HelloWorldMinimalApi\HelloWorldMinimalApi.csproj", "{63BA883B-A47B-481D-A145-BE03BE7A0C5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63BA883B-A47B-481D-A145-BE03BE7A0C5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63BA883B-A47B-481D-A145-BE03BE7A0C5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63BA883B-A47B-481D-A145-BE03BE7A0C5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63BA883B-A47B-481D-A145-BE03BE7A0C5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AF261949-55F0-4623-97F4-8F06CA0B904C} = {BE3E844F-4C0A-4A87-8C1F-C7AF3DA72CC9}
+		{94BBDE25-9029-4E87-B060-1BD0E3149623} = {AF261949-55F0-4623-97F4-8F06CA0B904C}
+		{63BA883B-A47B-481D-A145-BE03BE7A0C5E} = {94BBDE25-9029-4E87-B060-1BD0E3149623}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72C4A4DD-8212-46EE-93FF-A6FE33C15678}
+	EndGlobalSection
+EndGlobal
