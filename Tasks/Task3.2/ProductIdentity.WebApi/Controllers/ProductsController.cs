@@ -5,6 +5,7 @@ using ProductIdentity.Models;
 
 namespace ProductIdentity.WebApi.Controllers;
 
+
 [Route("api/[controller]")]
 [ApiController]
 public class ProductsController : ControllerBase
@@ -18,6 +19,7 @@ public class ProductsController : ControllerBase
 
     // GET: api/Products
     [HttpGet]
+    
     public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
     {
         var products = await _productRepository.GetAllAsync();
