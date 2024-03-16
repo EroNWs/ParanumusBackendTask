@@ -25,6 +25,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task2.2", "Task2.2", "{676E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalogAsyncMinimalApi", "Tasks\Task2.2\ProductCatalogAsyncMinimalApi\ProductCatalogAsyncMinimalApi.csproj", "{ECDE9696-A3F6-400B-AD76-10B0A192F42E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task3", "Task3", "{7453120A-BCE2-4E7F-8E9B-3933C33AF84C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalogAsyncWithSql.WebApi", "Tasks\Task3.1\ProductCatalogAsyncWithSql.WebApi\ProductCatalogAsyncWithSql.WebApi.csproj", "{20373F40-4AB0-4F59-85CC-3F51CC2C54F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +51,10 @@ Global
 		{ECDE9696-A3F6-400B-AD76-10B0A192F42E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECDE9696-A3F6-400B-AD76-10B0A192F42E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECDE9696-A3F6-400B-AD76-10B0A192F42E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20373F40-4AB0-4F59-85CC-3F51CC2C54F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20373F40-4AB0-4F59-85CC-3F51CC2C54F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20373F40-4AB0-4F59-85CC-3F51CC2C54F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20373F40-4AB0-4F59-85CC-3F51CC2C54F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +70,8 @@ Global
 		{14E1515A-BFC7-4B81-8A47-6EFD756529EF} = {BC9062E0-2D7F-4933-8518-AFA35DDF4C6E}
 		{676EFBD5-EAEB-493A-880B-66B49B9237A8} = {BC9062E0-2D7F-4933-8518-AFA35DDF4C6E}
 		{ECDE9696-A3F6-400B-AD76-10B0A192F42E} = {676EFBD5-EAEB-493A-880B-66B49B9237A8}
+		{7453120A-BCE2-4E7F-8E9B-3933C33AF84C} = {BE3E844F-4C0A-4A87-8C1F-C7AF3DA72CC9}
+		{20373F40-4AB0-4F59-85CC-3F51CC2C54F4} = {7453120A-BCE2-4E7F-8E9B-3933C33AF84C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {72C4A4DD-8212-46EE-93FF-A6FE33C15678}
