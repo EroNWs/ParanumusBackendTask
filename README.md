@@ -86,6 +86,9 @@ dotnet run
 
 ## Access the application:
 Access the web service by navigating to https://localhost:5001/calculateaverage?numbers=1,2,3 in your web browser or using a tool like curl or Postman, replacing 1,2,3 with your series of integers.
+```bash
+curl https://localhost:5001/calculateaverage?numbers=1,2,3
+```
 
 ## Usage
 To use the CalculateAverage API, send a GET request to the endpoint with a query parameter numbers containing a comma-separated list of integers. For example:
