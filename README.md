@@ -65,7 +65,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-- .NET 6 SDK
+- .NET 6 SDK or later
 
 ### Installation
 
@@ -176,7 +176,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-- .NET 6 SDK
+- .NET 6 SDK or later
 
 ### Running the Application
 
