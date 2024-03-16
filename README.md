@@ -45,6 +45,10 @@ Hello World
 
 ---------
 
+
+
+
+
 # CalculateAverage Minimal API
 
 The CalculateAverage Minimal API is a simple yet powerful .NET 6 web application designed to demonstrate a clean and efficient implementation of a web service that calculates the average value of a series of integers. It showcases error handling, input validation, and the elegance of Minimal APIs in ASP.NET Core.
