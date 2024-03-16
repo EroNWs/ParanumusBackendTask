@@ -136,7 +136,7 @@ Once the application is running, you can perform CRUD operations on the Product 
 ### Create a Product: POST /products
 Body: {"Id": 1, "Name": "Product Name", "Description": "Product Description", "Price": 100}
 ```bash
-curl -k -X POST https://localhost:5002/products -H "Content-Type: application/json" -d "{\"Id\": 2, \"Name\": \"Ürün Adı\", \"Description\": \"Ürün Açıklaması\", \"Price\": 100}"
+curl -k -X POST https://localhost:5002/products -H "Content-Type: application/json" -d "{\"Id\": 1, \"Name\": \"Ürün Adı\", \"Description\": \"Ürün Açıklaması\", \"Price\": 100}"
 ```
 ### Read All Products: GET /products
 ```bash
@@ -153,5 +153,70 @@ curl -X PUT https://localhost:5002/products/1 -H "Content-Type: application/json
 ```
 ### Delete a Product: DELETE /products/{id}
 ```bash
-curl -X DELETE https://localhost:5002/products/2
+curl -X DELETE https://localhost:5002/products/1
+```
+
+
+-------------
+# ProductCatalogAsyncMinimalApi
+
+A demonstration of using asynchronous programming in a Minimal API setup with .NET. This project showcases how to implement async CRUD operations for a simple product catalog, improving response times, resource utilization, and scalability.
+
+## Features
+
+- Asynchronous CRUD operations for a Product resource.
+- Enhanced response times by non-blocking I/O operations.
+- Improved resource utilization and scalability.
+- Optimized thread usage in I/O-bound operations.
+- Enhanced user experience in multi-user environments.
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+- .NET 6 SDK
+
+### Running the Application
+
+1. Clone the repository:
+```bash
+git clone https://github.com/EroNWs/ParanumusBackendTask.git
+```
+
+## Navigate to the project directory:
+```bash
+cd ProductCatalogAsyncMinimalApi project location
+```
+
+## Start the application:
+```bash
+dotnet run
+```
+
+The application will be available at https://localhost:5003.
+
+Usage
+The API supports the following asynchronous operations:
+
+### Adding a Product: Send a POST request to /products with the product data in the request body.
+```bash
+curl -k -X POST https://localhost:5003/products -H "Content-Type: application/json" -d "{\"Id\": 1, \"Name\": \"Ürün Adı\", \"Description\": \"Ürün Açıklaması\", \"Price\": 100}"
+```
+### Listing Products: Send a GET request to /products to retrieve a list of all products.
+```bash
+curl https://localhost:5003/products
+```
+### Getting One Product: Send a GET request to /products/{id} with the product's ID.
+```bash
+curl https://localhost:5003/products/1
+```
+### Updating a Product: Send a PUT request to /products/{id} with the updated product data.
+```bash
+curl -X PUT https://localhost:5003/products/1 -H "Content-Type: application/json" -d "{\"Id\": 1, \"Name\": \"Yeni Ürün Adı\", \"Description\": \"Yeni Ürün Açıklaması\", \"Price\": 150}"
+```
+### Deleting a Product: Send a DELETE request to /products/{id} with the product's ID.
+```bash
+curl -X DELETE https://localhost:5003/products/1
 ```
