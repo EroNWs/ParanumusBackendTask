@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.1.39" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ProductIdentity.DAL\ProductIdentity.DAL.csproj" />
     <ProjectReference Include="..\ProductIdentity.Infrastracture.Interface\ProductIdentity.Infrastracture.Interface.csproj" />
   </ItemGroup>
