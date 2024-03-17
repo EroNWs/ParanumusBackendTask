@@ -7,5 +7,6 @@ public abstract class BaseUser : AuditableEntity
     public string FullName => $"{FirstName} {LastName}";
     public string Email { get; set; } = null!;
 
+    public string? IdentityId { get; set; }
 
 }

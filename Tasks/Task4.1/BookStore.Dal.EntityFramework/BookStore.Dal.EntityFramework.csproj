@@ -9,7 +9,10 @@
   <ItemGroup>
     <Folder Include="Extensions\" />
     <Folder Include="Seeds\" />
-    <Folder Include="Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BookStore.Dal.Interface\BookStore.Dal.Interface.csproj" />
   </ItemGroup>
 
 </Project>

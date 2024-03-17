@@ -10,7 +10,7 @@ using System.Security.Claims;
 
 namespace BookStore.Dal.Contexts;
 
-public class BookStoreDbContext : IdentityDbContext<Admin>
+public class BookStoreDbContext : IdentityDbContext
 {
 
     private readonly IHttpContextAccessor? _contextAccessor;

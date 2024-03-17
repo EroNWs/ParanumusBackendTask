@@ -10,4 +10,8 @@
     <Folder Include="Admins\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BookStore.Entities\BookStore.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BookStore.Dal.EntityFramework
-{
-    internal class GlobalUsing
-    {
-    }
-}
+﻿global using BookStore.Core.DataAccess.EntityFramework;
+global using BookStore.Dal.Contexts;
+global using BookStore.Dal.Interface.Repositories;
+global using BookStore.Entities.DbSets;

@@ -1,8 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿namespace BookStore.Entities.DbSets;
 
-namespace BookStore.Entities.DbSets;
-
-public class Admin:IdentityUser
+public class Admin:BaseUser
 {
 
 }
