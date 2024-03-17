@@ -20,14 +20,32 @@ public class PurchaseService : IPurchaseService
         var discountRate = CalculateDiscount(customer);
 
         double originalPrice = 0.0;
+        List<OrderDetail> orderDetailsList = new List<OrderDetail>();
         foreach (var bookOrder in request.Books)
         {
             var book = await _repositoryManager.BookRepository.GetByIdAsync(bookOrder.BookId);
+
             if (book != null)
             {
+
+                var totalPriceForBook = book.ListPrice * bookOrder.Count;
+
+                OrderDetail orderDetail = new OrderDetail
+                {
+                    TotalPriceForBooks = (Decimal)totalPriceForBook,
+                    BookId = bookOrder.BookId,    
+                    Count = bookOrder.Count                    
+
+                };
+                orderDetailsList.Add(orderDetail);
+                await _repositoryManager.OrderDetailRepository.AddAsync(orderDetail);
+                await _repositoryManager.OrderDetailRepository.SaveChangesAsync();
+
                 originalPrice += book.ListPrice * bookOrder.Count;
             }
         }
+
+
 
         var discountAmount = originalPrice * discountRate;
 
@@ -37,13 +55,19 @@ public class PurchaseService : IPurchaseService
         var order = new Order
         {
           
-            CustomerId = request.CustomerId,
-
+            TotalPrice =(decimal)originalPrice,
+            PaidPrice =(decimal)finalPrice,
+            DiscountRatio = (decimal)discountAmount,
+            CustomerId = customer.Id,
+            OrderDetails = orderDetailsList
 
         };
 
+
         await _repositoryManager.OrderRepository.AddAsync(order);
         await _repositoryManager.OrderRepository.SaveChangesAsync();
+
+
 
         await UpdateCustomerRoleBasedOnSpending(request.CustomerId);
 

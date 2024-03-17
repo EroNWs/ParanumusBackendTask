@@ -8,16 +8,13 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
 {
     public void Configure(EntityTypeBuilder<Order> builder)
     {
-        builder.Property(o => o.Count).IsRequired();
-        builder.Property(o => o.BookId).IsRequired();
-        builder.Property(o => o.CustomerId).IsRequired();
+        builder.Property(o => o.TotalPrice).IsRequired().HasColumnType("decimal(18,2)");
+        builder.Property(o => o.PaidPrice).IsRequired().HasColumnType("decimal(18,2)");
+        builder.Property(o => o.DiscountRatio).IsRequired().HasColumnType("decimal(18,2)");
 
-        builder.HasOne(o => o.Book)
-               .WithMany(b => b.Orders)
-               .HasForeignKey(o => o.BookId);
+        builder.HasMany(o => o.OrderDetails)
+               .WithOne(od => od.Order)
+               .HasForeignKey(od => od.OrderId);
 
-        builder.HasOne(o => o.Customer)
-               .WithMany(c => c.Orders)
-               .HasForeignKey(o => o.CustomerId);
     }
 }

@@ -11,7 +11,6 @@ public class Book:AuditableEntity
 
     public double ListPrice { get; set; }
 
-    public IEnumerable<Order> Orders { get; set; }
-
+    public IEnumerable<OrderDetail> OrderDetails { get; set; }
 
 }

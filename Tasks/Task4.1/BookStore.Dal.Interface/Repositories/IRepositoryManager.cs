@@ -11,6 +11,8 @@ public interface IRepositoryManager
 
     IOrderRepository OrderRepository { get; }
 
+    IOrderDetailRepository OrderDetailRepository { get; }
+
     Task SaveAsync();
 
 
