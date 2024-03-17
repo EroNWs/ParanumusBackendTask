@@ -12,7 +12,7 @@ namespace BookStore.Dal.Contexts;
 
 public class BookStoreDbContext : IdentityDbContext
 {
-
+    public const string ConnectionName = "ParanamusDbContext";
     private readonly IHttpContextAccessor? _contextAccessor;
     public BookStoreDbContext(DbContextOptions<BookStoreDbContext> options, IHttpContextAccessor contextAccessor) : base(options)
     {
