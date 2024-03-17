@@ -55,39 +55,57 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductIdentity.Infrastract
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductIdentity.Models", "Tasks\Task3.2\ProductIdentity.Models\ProductIdentity.Models.csproj", "{CF7A109E-22D8-41D8-83F3-DE436DA7CC8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductIdentity.Dtos", "Tasks\Task3.2\ProductIdentity.Dtos\ProductIdentity.Dtos.csproj", "{3383F481-92D8-49C3-8547-E31FD62240AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductIdentity.Dtos", "Tasks\Task3.2\ProductIdentity.Dtos\ProductIdentity.Dtos.csproj", "{3383F481-92D8-49C3-8547-E31FD62240AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductIdentity.Application", "Tasks\Task3.2\ProductIdentity.Application\ProductIdentity.Application.csproj", "{14C3D4D6-2D0E-4AF3-8034-B3D431EA9515}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductIdentity.Application", "Tasks\Task3.2\ProductIdentity.Application\ProductIdentity.Application.csproj", "{14C3D4D6-2D0E-4AF3-8034-B3D431EA9515}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductLogging.WebApi", "Tasks\Task3.3\ProductLogging.WebApi\ProductLogging.WebApi.csproj", "{DC38C0B2-31F4-4341-911F-4C473327B790}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductLogging.WebApi", "Tasks\Task3.3\ProductLogging.WebApi\ProductLogging.WebApi.csproj", "{DC38C0B2-31F4-4341-911F-4C473327B790}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductLogging.DAL", "Tasks\Task3.3\ProductLogging.DAL\ProductLogging.DAL.csproj", "{AA3C7963-E5EC-45BD-96A0-0CE073CA2335}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductLogging.DAL", "Tasks\Task3.3\ProductLogging.DAL\ProductLogging.DAL.csproj", "{AA3C7963-E5EC-45BD-96A0-0CE073CA2335}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductLogging.Infrastracture", "Tasks\Task3.3\ProductLogging.Infrastracture\ProductLogging.Infrastracture.csproj", "{5028547A-3692-467B-A3E5-336A89D601F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductLogging.Infrastracture", "Tasks\Task3.3\ProductLogging.Infrastracture\ProductLogging.Infrastracture.csproj", "{5028547A-3692-467B-A3E5-336A89D601F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductLogging.Infrastracture.Interface", "Tasks\Task3.3\ProductLogging.Infrastracture.Interface\ProductLogging.Infrastracture.Interface.csproj", "{862770BA-55F9-4330-AF52-60ECA1622CA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductLogging.Infrastracture.Interface", "Tasks\Task3.3\ProductLogging.Infrastracture.Interface\ProductLogging.Infrastracture.Interface.csproj", "{862770BA-55F9-4330-AF52-60ECA1622CA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductLogging.Models", "Tasks\Task3.3\ProductLogging.Models\ProductLogging.Models.csproj", "{4D50283A-1CB2-439E-9E2B-D957E0DFD98D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductLogging.Models", "Tasks\Task3.3\ProductLogging.Models\ProductLogging.Models.csproj", "{4D50283A-1CB2-439E-9E2B-D957E0DFD98D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductLogging.Application", "Tasks\Task3.3\ProductLogging.Application\ProductLogging.Application.csproj", "{F60C698C-FD04-4C31-81FF-A4956F2FB522}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductLogging.Application", "Tasks\Task3.3\ProductLogging.Application\ProductLogging.Application.csproj", "{F60C698C-FD04-4C31-81FF-A4956F2FB522}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductLogging.Dtos", "Tasks\Task3.3\ProductLogging.Dtos\ProductLogging.Dtos.csproj", "{5D459C69-6C1B-4A7A-83FF-C23978787D02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductLogging.Dtos", "Tasks\Task3.3\ProductLogging.Dtos\ProductLogging.Dtos.csproj", "{5D459C69-6C1B-4A7A-83FF-C23978787D02}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task4", "Task4", "{3A46B18F-98EF-4CAB-A58A-C4E6C9EE71D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductPerformance.WebApi", "Tasks\Task3.4\ProductPerformance.WebApi\ProductPerformance.WebApi.csproj", "{3ACFB770-3A75-420E-888B-A9B9C4DCE017}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductPerformance.WebApi", "Tasks\Task3.4\ProductPerformance.WebApi\ProductPerformance.WebApi.csproj", "{3ACFB770-3A75-420E-888B-A9B9C4DCE017}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductPerformance.Models", "Tasks\Task3.4\ProductPerformance.Models\ProductPerformance.Models.csproj", "{EA97F331-DB90-4CF1-A217-A40416A570D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductPerformance.Models", "Tasks\Task3.4\ProductPerformance.Models\ProductPerformance.Models.csproj", "{EA97F331-DB90-4CF1-A217-A40416A570D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductPerformance.Infrastracture", "Tasks\Task3.4\ProductPerformance.Infrastracture\ProductPerformance.Infrastracture.csproj", "{7DE02B58-979E-4E6B-9EEC-1DD7942EC8AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductPerformance.Infrastracture", "Tasks\Task3.4\ProductPerformance.Infrastracture\ProductPerformance.Infrastracture.csproj", "{7DE02B58-979E-4E6B-9EEC-1DD7942EC8AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductPerformance.Infrastracture.Interface", "ProductPerformance.Infrastracture.Interface\ProductPerformance.Infrastracture.Interface.csproj", "{5DB0A88D-AC1C-441B-BA34-BE3BC2787211}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductPerformance.Infrastracture.Interface", "ProductPerformance.Infrastracture.Interface\ProductPerformance.Infrastracture.Interface.csproj", "{5DB0A88D-AC1C-441B-BA34-BE3BC2787211}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductPerformance.Dtos", "Tasks\Task3.4\ProductPerformance.Dtos\ProductPerformance.Dtos.csproj", "{B795A76D-620D-4757-A477-2C11FD5F99F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductPerformance.Dtos", "Tasks\Task3.4\ProductPerformance.Dtos\ProductPerformance.Dtos.csproj", "{B795A76D-620D-4757-A477-2C11FD5F99F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductPerformance.Application", "Tasks\Task3.4\ProductPerformance.Application\ProductPerformance.Application.csproj", "{A810813C-20EC-4859-BECD-40ED23480C1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductPerformance.Application", "Tasks\Task3.4\ProductPerformance.Application\ProductPerformance.Application.csproj", "{A810813C-20EC-4859-BECD-40ED23480C1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductPerformance.DAL", "Tasks\Task3.4\ProductPerformance.DAL\ProductPerformance.DAL.csproj", "{7780961D-8A49-4D45-A5EC-0106923F30CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductPerformance.DAL", "Tasks\Task3.4\ProductPerformance.DAL\ProductPerformance.DAL.csproj", "{7780961D-8A49-4D45-A5EC-0106923F30CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Business", "Tasks\Task4.1\BookStore.Business\BookStore.Business.csproj", "{8F613328-2C22-43A9-9EA3-6C423CE0C552}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Core", "Tasks\Task4.1\BookStore.Core\BookStore.Core.csproj", "{8CFF930B-8EF0-4D8F-83EA-2DCD8B55FFF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Dal", "Tasks\Task4.1\BookStore.Dal\BookStore.Dal.csproj", "{0C75BA76-4E75-497A-96B4-42102EB59B88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Dal.EntityFramework", "Tasks\Task4.1\BookStore.Dal.EntityFramework\BookStore.Dal.EntityFramework.csproj", "{851C86D3-ACD8-4BDD-9CA3-E757A15E6F7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Dal.Interface", "Tasks\Task4.1\BookStore.Dal.Interface\BookStore.Dal.Interface.csproj", "{9F2C3B74-1C5B-4BDA-B8DF-4E98AA68C5F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Dtos", "Tasks\Task4.1\BookStore.Dtos\BookStore.Dtos.csproj", "{6A5B8ECC-3F56-4C67-980C-DC850BD99AB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Entity.Configuration", "Tasks\Task4.1\BookStore.Entity.Configuration\BookStore.Entity.Configuration.csproj", "{C5818245-EFFD-4D73-98EF-C9717CB539EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Entities", "Tasks\Task4.1\BookStore.Entities\BookStore.Entities.csproj", "{024EB93C-3739-4527-83F1-5CE46F40DF66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.WebApi", "Tasks\Task4.1\BookStore.WebApi\BookStore.WebApi.csproj", "{DB89B264-F478-4363-BF77-8FE9102545FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -215,6 +233,42 @@ Global
 		{7780961D-8A49-4D45-A5EC-0106923F30CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7780961D-8A49-4D45-A5EC-0106923F30CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7780961D-8A49-4D45-A5EC-0106923F30CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F613328-2C22-43A9-9EA3-6C423CE0C552}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F613328-2C22-43A9-9EA3-6C423CE0C552}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F613328-2C22-43A9-9EA3-6C423CE0C552}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F613328-2C22-43A9-9EA3-6C423CE0C552}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CFF930B-8EF0-4D8F-83EA-2DCD8B55FFF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CFF930B-8EF0-4D8F-83EA-2DCD8B55FFF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CFF930B-8EF0-4D8F-83EA-2DCD8B55FFF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CFF930B-8EF0-4D8F-83EA-2DCD8B55FFF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C75BA76-4E75-497A-96B4-42102EB59B88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C75BA76-4E75-497A-96B4-42102EB59B88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C75BA76-4E75-497A-96B4-42102EB59B88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C75BA76-4E75-497A-96B4-42102EB59B88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{851C86D3-ACD8-4BDD-9CA3-E757A15E6F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{851C86D3-ACD8-4BDD-9CA3-E757A15E6F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{851C86D3-ACD8-4BDD-9CA3-E757A15E6F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{851C86D3-ACD8-4BDD-9CA3-E757A15E6F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F2C3B74-1C5B-4BDA-B8DF-4E98AA68C5F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F2C3B74-1C5B-4BDA-B8DF-4E98AA68C5F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F2C3B74-1C5B-4BDA-B8DF-4E98AA68C5F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F2C3B74-1C5B-4BDA-B8DF-4E98AA68C5F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A5B8ECC-3F56-4C67-980C-DC850BD99AB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A5B8ECC-3F56-4C67-980C-DC850BD99AB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A5B8ECC-3F56-4C67-980C-DC850BD99AB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A5B8ECC-3F56-4C67-980C-DC850BD99AB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5818245-EFFD-4D73-98EF-C9717CB539EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5818245-EFFD-4D73-98EF-C9717CB539EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5818245-EFFD-4D73-98EF-C9717CB539EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5818245-EFFD-4D73-98EF-C9717CB539EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{024EB93C-3739-4527-83F1-5CE46F40DF66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{024EB93C-3739-4527-83F1-5CE46F40DF66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{024EB93C-3739-4527-83F1-5CE46F40DF66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{024EB93C-3739-4527-83F1-5CE46F40DF66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB89B264-F478-4363-BF77-8FE9102545FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB89B264-F478-4363-BF77-8FE9102545FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB89B264-F478-4363-BF77-8FE9102545FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB89B264-F478-4363-BF77-8FE9102545FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -262,6 +316,15 @@ Global
 		{B795A76D-620D-4757-A477-2C11FD5F99F0} = {92893A42-06CB-4F69-8F30-83C1BE4FF2F1}
 		{A810813C-20EC-4859-BECD-40ED23480C1E} = {92893A42-06CB-4F69-8F30-83C1BE4FF2F1}
 		{7780961D-8A49-4D45-A5EC-0106923F30CE} = {92893A42-06CB-4F69-8F30-83C1BE4FF2F1}
+		{8F613328-2C22-43A9-9EA3-6C423CE0C552} = {3A46B18F-98EF-4CAB-A58A-C4E6C9EE71D8}
+		{8CFF930B-8EF0-4D8F-83EA-2DCD8B55FFF3} = {3A46B18F-98EF-4CAB-A58A-C4E6C9EE71D8}
+		{0C75BA76-4E75-497A-96B4-42102EB59B88} = {3A46B18F-98EF-4CAB-A58A-C4E6C9EE71D8}
+		{851C86D3-ACD8-4BDD-9CA3-E757A15E6F7A} = {3A46B18F-98EF-4CAB-A58A-C4E6C9EE71D8}
+		{9F2C3B74-1C5B-4BDA-B8DF-4E98AA68C5F0} = {3A46B18F-98EF-4CAB-A58A-C4E6C9EE71D8}
+		{6A5B8ECC-3F56-4C67-980C-DC850BD99AB0} = {3A46B18F-98EF-4CAB-A58A-C4E6C9EE71D8}
+		{C5818245-EFFD-4D73-98EF-C9717CB539EF} = {3A46B18F-98EF-4CAB-A58A-C4E6C9EE71D8}
+		{024EB93C-3739-4527-83F1-5CE46F40DF66} = {3A46B18F-98EF-4CAB-A58A-C4E6C9EE71D8}
+		{DB89B264-F478-4363-BF77-8FE9102545FB} = {3A46B18F-98EF-4CAB-A58A-C4E6C9EE71D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {72C4A4DD-8212-46EE-93FF-A6FE33C15678}
