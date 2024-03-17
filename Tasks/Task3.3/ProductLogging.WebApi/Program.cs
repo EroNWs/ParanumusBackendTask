@@ -37,7 +37,7 @@ if (app.Environment.IsProduction())
     app.UseHsts();
 }
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Marvin.Cache.Headers;
+using Microsoft.Extensions.DependencyInjection;
 using ProductPerformance.Application.Contracts;
 using ProductPerformance.Application.Interfaces;
 using ProductPerformance.Application.Mapping;
@@ -20,4 +21,16 @@ public static class ServiceExtension
         return services;
     }
 
+    public static void ConfigureResponseCaching(this IServiceCollection services) => services.AddResponseCaching();
+
+    public static void ConfigureHttpCacheHeaders(this IServiceCollection services)=> services.AddHttpCacheHeaders(expirationOptions =>
+    {
+        expirationOptions.MaxAge = 70;
+        expirationOptions.CacheLocation = CacheLocation.Private;
+    },
+        validatonOptions =>
+        {
+            validatonOptions.MustRevalidate = false;
+        }
+    );
 }

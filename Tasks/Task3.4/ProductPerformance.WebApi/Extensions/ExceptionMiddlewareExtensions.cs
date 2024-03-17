@@ -3,7 +3,7 @@ using ProductPerformance.Application.Contracts;
 using ProductPerformance.Models.ErrorModels;
 using ProductPerformance.Models.Exceptions;
 
-namespace ProductPerformance.WebApi.Exceptions;
+namespace ProductPerformance.WebApi.Extensions;
 
 public static class ExceptionMiddlewareExtensions
 {

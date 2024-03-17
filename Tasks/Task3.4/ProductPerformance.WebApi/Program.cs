@@ -4,7 +4,7 @@ using ProductPerformance.Application.Extensions;
 using ProductPerformance.Infrastracture.RepoExtensions;
 using NLog;
 using ProductPerformance.Application.Contracts;
-using ProductPerformance.WebApi.Exceptions;
+using ProductPerformance.WebApi.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
@@ -14,7 +14,10 @@ LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nl
 builder.Services.AddDbContext<ProductPerformanceDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ProductDb")));
 builder.Services.AddServiceExtensions();
 builder.Services.AddInfrastractureExtensions();
-builder.Services.AddControllers();
+builder.Services.AddControllers(config =>
+{
+    config.CacheProfiles.Add("10mins", new Microsoft.AspNetCore.Mvc.CacheProfile() { Duration = 250 });
+});
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -23,6 +26,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddAuthentication();
 builder.Services.ConfigureIdentity();
 builder.Services.ConfigureJWT(builder.Configuration);
+builder.Services.ConfigureResponseCaching();
+builder.Services.ConfigureHttpCacheHeaders();
 var app = builder.Build();
 var logger = app.Services.GetRequiredService<ILoggerService>();
 app.ConfigureExtceptionHandler(logger);
@@ -38,6 +43,9 @@ if (app.Environment.IsProduction())
 }
 app.UseHttpsRedirection();
 
+app.UseResponseCaching();
+app.UseHttpCacheHeaders();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Marvin.Cache.Headers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProductPerformance.Application.Interfaces;
 using ProductPerformance.Dtos;
@@ -8,6 +9,7 @@ namespace ProductPerformance.WebApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[HttpCacheExpiration(CacheLocation= CacheLocation.Public, MaxAge =100)]
 public class ProductsController : ControllerBase
 {
 
@@ -21,6 +23,7 @@ public class ProductsController : ControllerBase
     // GET: api/Products
     [HttpGet]
     [AllowAnonymous]
+
     public async Task<ActionResult<IEnumerable<ProductDto>>> GetProducts()
     {
         var products = await _productService.GetAllAsync();
@@ -30,6 +33,7 @@ public class ProductsController : ControllerBase
     // GET: api/Products/5
     [HttpGet("{id}")]
     [AllowAnonymous]
+
     public async Task<ActionResult<ProductDto>> GetProduct(int id)
     {
         var product = await _productService.GetByIdAsync(id);
