@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BookStore.Core.DataAccess.Interfaces;
+﻿namespace BookStore.Core.DataAccess.Interfaces;
 
 public interface IAsyncDeleteableRepository<TEntity> : IAsyncRepository where TEntity : BaseEntity
 {
