@@ -14,6 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\ProductPerformance.Infrastracture.Interface\ProductPerformance.Infrastracture.Interface.csproj" />
+    <ProjectReference Include="..\..\Task3.4\ProductPerformance.Models\ProductPerformance.Models.csproj" />
     <ProjectReference Include="..\ProductLogging.DAL\ProductLogging.DAL.csproj" />
     <ProjectReference Include="..\ProductLogging.Infrastracture.Interface\ProductLogging.Infrastracture.Interface.csproj" />
   </ItemGroup>

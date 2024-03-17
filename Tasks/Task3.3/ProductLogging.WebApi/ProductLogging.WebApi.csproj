@@ -8,16 +8,15 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="NLog.Extensions.Logging" Version="5.3.8" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\Task3.2\ProductIdentity.DAL\ProductIdentity.DAL.csproj" />
     <ProjectReference Include="..\ProductLogging.Application\ProductLogging.Application.csproj" />
     <ProjectReference Include="..\ProductLogging.DAL\ProductLogging.DAL.csproj" />
     <ProjectReference Include="..\ProductLogging.Dtos\ProductLogging.Dtos.csproj" />

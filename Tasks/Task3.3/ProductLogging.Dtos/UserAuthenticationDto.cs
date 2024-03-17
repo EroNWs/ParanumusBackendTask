@@ -10,4 +10,5 @@ public record UserAuthenticationDto
     [Required(ErrorMessage = "Password is Required")]
     public string? Password { get; init; }
 
+
 }

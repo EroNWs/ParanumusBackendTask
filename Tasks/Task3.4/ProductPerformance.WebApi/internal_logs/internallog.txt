@@ -1,0 +1,20 @@
+2024-03-17 11:21:19.3128 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-03-17 11:21:19.3128 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-17 11:21:19.3229 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=D:\erp\beema\ParanumusBackendTask\Tasks\Task3.4\ProductPerformance.WebApi\nlog.config
+2024-03-17 11:21:19.3229 Info Configuration initialized.
+2024-03-17 11:21:20.5635 Info AppDomain Shutting down. LogFactory closing...
+2024-03-17 11:21:20.5635 Info LogFactory has been closed.
+2024-03-17 11:21:26.8581 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-03-17 11:21:26.8581 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-17 11:21:26.8689 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=D:\erp\beema\ParanumusBackendTask\Tasks\Task3.4\ProductPerformance.WebApi\nlog.config
+2024-03-17 11:21:26.8689 Info Configuration initialized.
+2024-03-17 11:21:32.7540 Info AppDomain Shutting down. LogFactory closing...
+2024-03-17 11:21:32.7540 Info LogFactory has been closed.
+2024-03-17 14:26:12.7274 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-03-17 14:26:12.7554 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-17 14:26:12.7631 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=D:\erp\beema\ParanumusBackendTask\Tasks\Task3.4\ProductPerformance.WebApi\nlog.config
+2024-03-17 14:26:12.7631 Info Configuration initialized.
+2024-03-17 14:29:01.7000 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-03-17 14:29:01.7214 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-17 14:29:01.7281 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=D:\erp\beema\ParanumusBackendTask\Tasks\Task3.4\ProductPerformance.WebApi\nlog.config
+2024-03-17 14:29:01.7281 Info Configuration initialized.
