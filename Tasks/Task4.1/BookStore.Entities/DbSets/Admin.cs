@@ -1,6 +1,8 @@
-﻿namespace BookStore.Entities.DbSets;
+﻿using Microsoft.AspNetCore.Identity;
 
-public class Admin
+namespace BookStore.Entities.DbSets;
+
+public class Admin:IdentityUser
 {
 
 }
