@@ -14,5 +14,4 @@ public class Book:AuditableEntity
     public IEnumerable<Order> Orders { get; set; }
 
 
-
 }

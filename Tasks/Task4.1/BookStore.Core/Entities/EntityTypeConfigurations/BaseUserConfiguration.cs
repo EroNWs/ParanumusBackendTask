@@ -12,9 +12,6 @@ public abstract class BaseUserConfiguration<T> : AuditableEntityConfiguration<T>
         builder.Property(x => x.FirstName).HasMaxLength(256).IsRequired();
         builder.Property(x => x.LastName).IsRequired().HasMaxLength(256);
         builder.Property(x => x.Email).HasMaxLength(256).IsRequired();
-        builder.Property(x => x.DateOfBirth).HasColumnType("date").IsRequired();
-        builder.Property(x => x.Gender).IsRequired();
-        builder.Property(x => x.Image).IsRequired(false);
         builder.Property(x => x.IdentityId).IsRequired();
     }
 }

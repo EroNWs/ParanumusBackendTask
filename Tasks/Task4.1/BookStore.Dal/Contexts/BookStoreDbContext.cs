@@ -23,8 +23,6 @@ public class BookStoreDbContext : IdentityDbContext
     public virtual DbSet<Book> Books { get; set; } = null!;
     public virtual DbSet<Customer> Customers { get; set; } = null!;
     public virtual DbSet<Order> Orders { get; set; } = null!;
-    public virtual DbSet<OrderDetail> OrderDetails { get; set; } = null!;
-
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

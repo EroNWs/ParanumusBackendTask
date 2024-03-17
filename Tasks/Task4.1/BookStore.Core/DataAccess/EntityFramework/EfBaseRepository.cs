@@ -28,6 +28,12 @@ public abstract class EFBaseRepository<TEntity> : IAsyncOrderableRepository<TEnt
 
         return entry.Entity;
     }
+    public async Task<IEnumerable<TEntity>> FindAllAsync(Expression<Func<TEntity, bool>> predicate, bool tracking = true)
+    {
+        return tracking
+            ? await _table.Where(predicate).ToListAsync()
+            : await _table.Where(predicate).AsNoTracking().ToListAsync();
+    }
 
     public Task AddRangeAsync(IEnumerable<TEntity> entities)
     {

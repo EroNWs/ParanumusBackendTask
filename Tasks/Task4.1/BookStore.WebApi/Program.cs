@@ -17,11 +17,14 @@ builder.Services.AddCors(options =>
 
 
 
-builder.Services.AddEFCoreServices(builder.Configuration);
+builder.Services
+    .AddEFCoreServices(builder.Configuration)
+    .AddBusinessServices();
+
 
 builder.Services.AddControllers(opt =>
 {
-    opt.Filters.Add(new AuthorizeFilter());
+    //opt.Filters.Add(new AuthorizeFilter());
 });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -37,7 +40,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseAuthentication();
+//app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

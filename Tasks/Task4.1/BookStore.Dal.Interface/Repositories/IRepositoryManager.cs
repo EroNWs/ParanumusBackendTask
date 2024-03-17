@@ -9,8 +9,6 @@ public interface IRepositoryManager
 
     ICustomerRepository CustomerRepository { get; }
 
-    IOrderDetailRepository OrderDetailRepository { get; }
-
     IOrderRepository OrderRepository { get; }
 
     Task SaveAsync();

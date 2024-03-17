@@ -12,5 +12,10 @@ public class Order: AuditableEntity
 
     public Customer Customer { get; set; }
 
+    public decimal TotalPrice { get; set; }
+
+    public decimal PaidPrice { get; set; }
+
+    public decimal DiscountRatio { get; set; }
 
 }

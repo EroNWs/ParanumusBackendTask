@@ -4,4 +4,5 @@ public interface ICustomerRepository : IAsyncRepository, IAsyncDeleteableReposit
     IAsyncInsertableRepository<Customer>, IAsyncOrderableRepository<Customer>,
     IAsyncQueryableRepository<Customer>, IAsyncUpdateableRepository<Customer>
 {
+
 }

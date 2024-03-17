@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BookStore.Dtos.Orders;
 
-namespace BookStore.Business.Interfaces
+namespace BookStore.Business.Interfaces;
+
+public interface IPurchaseService
 {
-    internal class IPurchaseService
-    {
-    }
+    Task<OrderResponseDto> ProcessPurchaseAsync(OrderRequestDto request);
 }

@@ -7,4 +7,6 @@ public interface IAsyncFindableRepository<TEntity> : IAsyncQueryableRepository<T
     Task<TEntity?> GetAsync(Expression<Func<TEntity, bool>> expression, bool tracking = true);
     Task<TEntity?> GetByIdAsync(Guid id, bool tracking = true);
     Task<bool> AnyAsync(Expression<Func<TEntity, bool>>? expression = null);
+    Task<IEnumerable<TEntity>> FindAllAsync(Expression<Func<TEntity, bool>> predicate, bool tracking = true);
+
 }
