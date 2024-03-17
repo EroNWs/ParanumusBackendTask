@@ -1,10 +1,10 @@
-﻿using BookStore.Core.Entities.Base;
+﻿using BookStore.Entities.Enums;
 
 namespace BookStore.Entities.DbSets;
 
 public class Customer: BaseUser
-{
-    //1'e Çok Bağlı Customer ile Order
+{   
+    public CustomerRole CustomerRole { get; set; } = CustomerRole.RegularCustomer;
 
     public IEnumerable<Order> Orders { get; set; }
 
