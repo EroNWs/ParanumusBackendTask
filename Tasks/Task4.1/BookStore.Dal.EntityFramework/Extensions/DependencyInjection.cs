@@ -14,6 +14,7 @@ public static class DependencyInjection
         services.AddScoped<IBookRepository,BookRepository>();
         services.AddScoped<IOrderDetailRepository, OrderDetailRepository>();
         services.AddScoped<IOrderRepository, OrderRepository>();
+        services.AddScoped<IRepositoryManager,RepositoryManager>();
 
         AdminSeed.SeedAsync(configuration).GetAwaiter().GetResult();
 
