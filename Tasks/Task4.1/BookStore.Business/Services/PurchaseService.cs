@@ -33,8 +33,8 @@ public class PurchaseService : IPurchaseService
                 OrderDetail orderDetail = new OrderDetail
                 {
                     TotalPriceForBooks = (Decimal)totalPriceForBook,
-                    BookId = bookOrder.BookId,    
-                    Count = bookOrder.Count                    
+                    BookId = bookOrder.BookId,
+                    Count = bookOrder.Count
 
                 };
                 orderDetailsList.Add(orderDetail);
@@ -54,9 +54,9 @@ public class PurchaseService : IPurchaseService
 
         var order = new Order
         {
-          
-            TotalPrice =(decimal)originalPrice,
-            PaidPrice =(decimal)finalPrice,
+
+            TotalPrice = (decimal)originalPrice,
+            PaidPrice = (decimal)finalPrice,
             DiscountRatio = (decimal)discountAmount,
             CustomerId = customer.Id,
             OrderDetails = orderDetailsList

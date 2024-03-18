@@ -1,11 +1,11 @@
 
 
 using BookStore.WebApi.Extensions;
-using Microsoft.AspNetCore.Mvc.Authorization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.ConfigureSqlContext(builder.Configuration);
+builder.Services.ConfigureInMemoryContext();
 // Add services to the container.
 builder.Services.AddCors(options =>
 {

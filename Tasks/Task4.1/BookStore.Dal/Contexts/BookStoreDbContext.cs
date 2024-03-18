@@ -30,6 +30,11 @@ public class BookStoreDbContext : IdentityDbContext
 
         base.OnModelCreating(builder);
     }
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.UseInMemoryDatabase("BookStoreDb");
+    }
+
 
     public override int SaveChanges()
     {

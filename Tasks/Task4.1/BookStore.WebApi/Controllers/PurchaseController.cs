@@ -9,10 +9,12 @@ namespace BookStore.WebApi.Controllers;
 public class PurchaseController : ControllerBase
 {
     private readonly IPurchaseService _purchaseService;
+    private readonly IInMemoryDataStoreService _storeService;
 
-    public PurchaseController(IPurchaseService purchaseService)
+    public PurchaseController(IPurchaseService purchaseService, IInMemoryDataStoreService storeService)
     {
         _purchaseService = purchaseService;
+        _storeService = storeService;
     }
 
     [HttpPost("make-purchase")]
@@ -22,6 +24,9 @@ public class PurchaseController : ControllerBase
         {
             return BadRequest(ModelState);
         }
+
+        var requestId = Guid.NewGuid().ToString();
+        _storeService.Add(requestId, orderRequest);
 
         try
         {
