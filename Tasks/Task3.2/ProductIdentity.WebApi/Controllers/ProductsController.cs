@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using ProductIdentity.Infrastracture.Interface;
-using ProductIdentity.Models;
 
 namespace ProductIdentity.WebApi.Controllers;
 

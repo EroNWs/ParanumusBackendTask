@@ -1,6 +1,4 @@
-﻿using ProductIdentity.Models;
-
-namespace ProductIdentity.Infrastracture.Interface;
+﻿namespace ProductIdentity.Infrastracture.Interface;
 
 public interface IProductRepository
 {

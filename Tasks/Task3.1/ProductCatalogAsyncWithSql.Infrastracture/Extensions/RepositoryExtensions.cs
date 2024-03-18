@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using ProductCatalogAsyncWithSql.Infrastracture.Interface;
 
 namespace ProductCatalogAsyncWithSql.Infrastracture.Extensions;
 

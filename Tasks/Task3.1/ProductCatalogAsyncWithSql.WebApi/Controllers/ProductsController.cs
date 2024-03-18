@@ -20,6 +20,7 @@ public class ProductsController : ControllerBase
     public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
     {
         var products = await _productRepository.GetAllAsync();
+
         return Ok(products);
     }
 

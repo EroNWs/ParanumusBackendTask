@@ -2,8 +2,6 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using ProductIdentity.Dtos;
-using ProductIdentity.Infrastracture.Interface;
-using ProductIdentity.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;

@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
 using ProductIdentity.Models;
 using System.Reflection;
 

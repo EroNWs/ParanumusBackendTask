@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using ProductIdentity.Dtos;
-using ProductIdentity.Models;
 
 namespace ProductIdentity.Infrastracture.Interface;
 

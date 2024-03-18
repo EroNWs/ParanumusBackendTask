@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProductIdentity.DAL;
-using ProductIdentity.Infrastracture.Interface;
-using ProductIdentity.Models;
+
 
 namespace ProductIdentity.Infrastracture;
 

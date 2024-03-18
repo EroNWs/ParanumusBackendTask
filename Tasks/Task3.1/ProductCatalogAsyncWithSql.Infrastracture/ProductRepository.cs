@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProductCatalogAsyncWithSql.DAL.Contexts;
-using ProductCatalogAsyncWithSql.Infrastracture.Interface;
 using ProductCatalogAsyncWithSql.Models;
 
 namespace ProductCatalogAsyncWithSql.Infrastracture;
@@ -23,7 +22,7 @@ public class ProductRepository:IProductRepository
     public async Task DeleteAsync(int id)
     {
         var product = await _context.Products.FindAsync(id);
-        if (product != null)
+        if (product is not null)
         {
             _context.Products.Remove(product);
             await _context.SaveChangesAsync();

@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 using ProductIdentity.Dtos;
-using ProductIdentity.Infrastracture.Interface;
-using ProductIdentity.Models;
 
 namespace ProductIdentity.WebApi.Controllers
 {

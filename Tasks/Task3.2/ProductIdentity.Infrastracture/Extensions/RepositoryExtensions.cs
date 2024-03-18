@@ -3,9 +3,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using ProductIdentity.DAL;
-using ProductIdentity.Infrastracture.Interface;
-using ProductIdentity.Models;
 using System.Text;
 
 namespace ProductIdentity.Infrastracture.Extensions;
