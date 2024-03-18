@@ -1,5 +1,5 @@
 ﻿namespace BookStore.Business.Interfaces;
 
-public class IAdminService
+public interface IAdminService
 {
 }

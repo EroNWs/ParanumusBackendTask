@@ -6,17 +6,23 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-if (builder.Environment.IsDevelopment())
+if (builder.Environment.IsEnvironment("Testing"))
 {
-    // Geliþtirme ortamý için InMemory veritabaný
+ 
     builder.Services.AddDbContext<BookStoreDbContext>(options =>
         options.UseInMemoryDatabase("BookStoreDb"));
 }
+else if (builder.Environment.IsDevelopment())
+{
+
+    builder.Services.AddDbContext<BookStoreDbContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("ParanamusDbContext")));
+}
 else
 {
-    // Üretim ortamý için SQL Server
+
     builder.Services.AddDbContext<BookStoreDbContext>(options =>
-        options.UseSqlServer(builder.Configuration.GetConnectionString("BookStoreDb")));
+        options.UseSqlServer(builder.Configuration.GetConnectionString("ParanamusDbContext")));
 }
 
 
@@ -36,6 +42,7 @@ builder.Services
     .AddEFCoreServices(builder.Configuration)
     .AddBusinessServices();
 
+builder.Services.ConfigureAllDtoAutoMapper();
 
 builder.Services.AddControllers(opt =>
 {

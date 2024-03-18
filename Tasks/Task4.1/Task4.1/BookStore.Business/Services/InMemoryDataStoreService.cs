@@ -1,6 +1,4 @@
-﻿using BookStore.Business.Interfaces;
-
-namespace BookStore.Business.Services;
+﻿namespace BookStore.Business.Services;
 
 public class InMemoryDataStoreService : IInMemoryDataStoreService
 {

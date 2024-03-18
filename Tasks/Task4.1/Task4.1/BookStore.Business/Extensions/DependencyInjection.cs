@@ -12,6 +12,7 @@ public static class DependencyInjection
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
         services.AddScoped<IPurchaseService,PurchaseService>();
         services.AddSingleton<IInMemoryDataStoreService,InMemoryDataStoreService>();
+        services.AddScoped<IBookService, BookService>();
         return services;
     }
 }

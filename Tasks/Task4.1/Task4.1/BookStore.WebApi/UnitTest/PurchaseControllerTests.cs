@@ -1,9 +1,7 @@
 ﻿using BookStore.Business.Interfaces;
-using BookStore.Dal.Contexts;
 using BookStore.Dtos.Orders;
 using BookStore.WebApi.Controllers;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Moq;
 using Xunit;
 
@@ -12,16 +10,14 @@ namespace BookStore.WebApi.UnitTest;
 public class PurchaseControllerTests
 {
     private readonly Mock<IPurchaseService> _mockPurchaseService;
-    private readonly Mock<IInMemoryDataStoreService> _mockInMemoryDataStoreService;
+    private readonly Mock<IInMemoryDataStoreService> _mockStoreService;
     private readonly PurchaseController _controller;
 
     public PurchaseControllerTests()
     {
         _mockPurchaseService = new Mock<IPurchaseService>();
-        _mockInMemoryDataStoreService = new Mock<IInMemoryDataStoreService>();
-
-        _controller = new PurchaseController(_mockPurchaseService.Object, _mockInMemoryDataStoreService.Object);
-
+        _mockStoreService = new Mock<IInMemoryDataStoreService>();
+        _controller = new PurchaseController(_mockPurchaseService.Object, _mockStoreService.Object);
     }
 
     [Fact]
@@ -58,7 +54,7 @@ public class PurchaseControllerTests
         var okResult = Assert.IsType<OkObjectResult>(result);
         var returnedOrderResponse = Assert.IsType<OrderResponseDto>(okResult.Value);
         Assert.Equal(orderResponse.FinalPrice, returnedOrderResponse.FinalPrice);
-        _mockInMemoryDataStoreService.Verify(service => service.Add(It.IsAny<string>(), It.IsAny<OrderRequestDto>()), Times.Once);
+        _mockStoreService.Verify(service => service.Add(It.IsAny<string>(), It.IsAny<OrderRequestDto>()), Times.Once);
     }
 
     [Fact]
