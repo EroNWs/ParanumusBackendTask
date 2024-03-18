@@ -105,6 +105,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Entity.Configurat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.WebApi", "Tasks\Task4.1\Task4.1\BookStore.WebApi\BookStore.WebApi.csproj", "{5051C6D2-76FD-4CA1-B34D-E12D06DDA29D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.WebApi.Tests", "Tasks\Task4.1\BookStore.WebApi.Tests\BookStore.WebApi.Tests.csproj", "{DAF400C1-E9EC-4AD6-B8A2-DB92BFEF2C92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -263,6 +265,10 @@ Global
 		{5051C6D2-76FD-4CA1-B34D-E12D06DDA29D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5051C6D2-76FD-4CA1-B34D-E12D06DDA29D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5051C6D2-76FD-4CA1-B34D-E12D06DDA29D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAF400C1-E9EC-4AD6-B8A2-DB92BFEF2C92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAF400C1-E9EC-4AD6-B8A2-DB92BFEF2C92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAF400C1-E9EC-4AD6-B8A2-DB92BFEF2C92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAF400C1-E9EC-4AD6-B8A2-DB92BFEF2C92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -318,6 +324,7 @@ Global
 		{C8583C44-E6DB-49EB-99E5-87B31AF4B97F} = {3A46B18F-98EF-4CAB-A58A-C4E6C9EE71D8}
 		{35C5F32F-68D2-466C-B124-ABFCCCD1DD4E} = {3A46B18F-98EF-4CAB-A58A-C4E6C9EE71D8}
 		{5051C6D2-76FD-4CA1-B34D-E12D06DDA29D} = {3A46B18F-98EF-4CAB-A58A-C4E6C9EE71D8}
+		{DAF400C1-E9EC-4AD6-B8A2-DB92BFEF2C92} = {3A46B18F-98EF-4CAB-A58A-C4E6C9EE71D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {72C4A4DD-8212-46EE-93FF-A6FE33C15678}
