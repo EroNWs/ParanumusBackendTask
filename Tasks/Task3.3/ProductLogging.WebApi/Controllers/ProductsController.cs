@@ -41,8 +41,7 @@ public class ProductsController : ControllerBase
             }
 
             return product;
-    
-    
+ 
       
     }
 

@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\BookStore.Shared\BookStore.Shared.csproj" />
     <ProjectReference Include="..\BookStore.Business\BookStore.Business.csproj" />
     <ProjectReference Include="..\BookStore.Dal.EntityFramework\BookStore.Dal.EntityFramework.csproj" />
   </ItemGroup>

@@ -1,12 +1,13 @@
 ﻿using BookStore.Business.Interfaces;
 using BookStore.Dtos.Books;
+using BookStore.Shared.BaseController;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookStore.WebApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class BooksController : ControllerBase
+public class BooksController : CustomBaseController
 {
     private readonly IBookService _bookService;
 

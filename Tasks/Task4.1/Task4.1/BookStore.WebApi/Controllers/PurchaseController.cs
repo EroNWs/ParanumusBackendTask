@@ -1,12 +1,14 @@
 ﻿using BookStore.Business.Interfaces;
 using BookStore.Dtos.Orders;
+using BookStore.Shared.BaseController;
+using BookStore.Shared.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookStore.WebApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class PurchaseController : ControllerBase
+public class PurchaseController : CustomBaseController
 {
     private readonly IPurchaseService _purchaseService;
     private readonly IInMemoryDataStoreService _storeService;
@@ -22,7 +24,7 @@ public class PurchaseController : ControllerBase
     {
         if (!ModelState.IsValid)
         {
-            return BadRequest(ModelState);
+            return CreateActionResultInstance(Response<NoContent>.Fail(ModelState.Values.SelectMany(x => x.Errors.Select(p => p.ErrorMessage)).ToList(), 400));
         }
 
         var requestId = Guid.NewGuid().ToString();
@@ -31,11 +33,11 @@ public class PurchaseController : ControllerBase
         try
         {
             var orderResponse = await _purchaseService.ProcessPurchaseAsync(orderRequest);
-            return Ok(orderResponse);
+            return CreateActionResultInstance(Response<OrderResponseDto>.Success(orderResponse, 200));
         }
         catch (Exception ex)
         {
-            return StatusCode(500, "Internal server error");
+            return CreateActionResultInstance(Response<NoContent>.Fail("Internal server error", 500));
         }
     }
 }

@@ -34,3 +34,15 @@
 2024-03-17 14:46:50.8407 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
 2024-03-17 14:46:50.8407 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=D:\erp\beema\ParanumusBackendTask\Tasks\Task3.4\ProductPerformance.WebApi\nlog.config
 2024-03-17 14:46:50.8627 Info Configuration initialized.
+2024-03-19 10:45:57.8510 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-03-19 10:45:57.8840 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-19 10:45:57.9004 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=D:\erp\beema\ParanumusBackendTask\Tasks\Task3.4\ProductPerformance.WebApi\nlog.config
+2024-03-19 10:45:57.9121 Info Configuration initialized.
+2024-03-19 10:50:16.1021 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-03-19 10:50:16.1260 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-19 10:50:16.1353 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=D:\erp\beema\ParanumusBackendTask\Tasks\Task3.4\ProductPerformance.WebApi\nlog.config
+2024-03-19 10:50:16.1463 Info Configuration initialized.
+2024-03-19 11:08:48.7020 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-03-19 11:08:48.7309 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-19 11:08:48.7389 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=D:\erp\beema\ParanumusBackendTask\Tasks\Task3.4\ProductPerformance.WebApi\nlog.config
+2024-03-19 11:08:48.7389 Info Configuration initialized.

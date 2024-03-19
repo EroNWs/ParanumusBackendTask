@@ -1,7 +1,6 @@
 
 
 using BookStore.Dal.Contexts;
-using BookStore.WebApi.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
