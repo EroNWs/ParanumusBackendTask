@@ -1,4 +1,6 @@
-﻿using BookStore.Business.Services;
+﻿using BookStore.Business.Contracts;
+using BookStore.Business.LoggingService;
+using BookStore.Business.Services;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
@@ -11,6 +13,7 @@ public static class DependencyInjection
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
         services.AddScoped<IPurchaseService,PurchaseService>();
         services.AddSingleton<IInMemoryDataStoreService,InMemoryDataStoreService>();
+        services.AddSingleton<ILoggerService, LoggerManager>();
         services.AddScoped<IBookService, BookService>();
         return services;
     }

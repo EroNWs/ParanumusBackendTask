@@ -1,9 +1,13 @@
 
 
+using BookStore.Business.Contracts;
 using BookStore.Dal.Contexts;
 using Microsoft.EntityFrameworkCore;
+using NLog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
 
 if (builder.Environment.IsEnvironment("Testing"))
 {
@@ -52,6 +56,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+var logger = app.Services.GetRequiredService<ILoggerService>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
