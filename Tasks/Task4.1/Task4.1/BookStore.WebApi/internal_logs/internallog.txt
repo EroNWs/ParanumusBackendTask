@@ -18,3 +18,23 @@
 2024-03-19 15:35:52.8835 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
 2024-03-19 15:35:52.8835 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=D:\erp\beema\ParanumusBackendTask\Tasks\Task4.1\Task4.1\BookStore.WebApi\nlog.config
 2024-03-19 15:35:52.8968 Info Configuration initialized.
+2024-03-19 15:46:28.3124 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-03-19 15:46:28.3550 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-19 15:46:28.3646 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=D:\erp\beema\ParanumusBackendTask\Tasks\Task4.1\Task4.1\BookStore.WebApi\nlog.config
+2024-03-19 15:46:28.3788 Info Configuration initialized.
+2024-03-19 15:50:28.2158 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-03-19 15:50:28.2407 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-19 15:50:28.2407 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=D:\erp\beema\ParanumusBackendTask\Tasks\Task4.1\Task4.1\BookStore.WebApi\nlog.config
+2024-03-19 15:50:28.2567 Info Configuration initialized.
+2024-03-19 15:56:28.0991 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-03-19 15:56:28.1371 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-19 15:56:28.1453 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=D:\erp\beema\ParanumusBackendTask\Tasks\Task4.1\Task4.1\BookStore.WebApi\nlog.config
+2024-03-19 15:56:28.1453 Info Configuration initialized.
+2024-03-19 16:01:06.5193 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-03-19 16:01:06.5691 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-19 16:01:06.5691 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=D:\erp\beema\ParanumusBackendTask\Tasks\Task4.1\Task4.1\BookStore.WebApi\nlog.config
+2024-03-19 16:01:06.5840 Info Configuration initialized.
+2024-03-19 16:03:01.3033 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2024-03-19 16:03:01.3444 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-19 16:03:01.3545 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=D:\erp\beema\ParanumusBackendTask\Tasks\Task4.1\Task4.1\BookStore.WebApi\nlog.config
+2024-03-19 16:03:01.3665 Info Configuration initialized.

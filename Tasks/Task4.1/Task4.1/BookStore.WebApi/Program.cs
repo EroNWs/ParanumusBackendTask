@@ -3,6 +3,7 @@
 using BookStore.Business.Contracts;
 using BookStore.Dal.Contexts;
 using BookStore.WebApi.Extensions;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NLog;
 
@@ -50,12 +51,14 @@ builder.Services.ConfigureAllDtoAutoMapper();
 
 builder.Services.AddControllers(opt =>
 {
+    opt.CacheProfiles.Add("10mins", new CacheProfile() { Duration = 250 });
     //opt.Filters.Add(new AuthorizeFilter());
 });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.ConfigureResponseCaching();
+builder.Services.ConfigureHttpCacheHeaders();
 var app = builder.Build();
 
 var logger = app.Services.GetRequiredService<ILoggerService>();
@@ -77,6 +80,8 @@ if (app.Environment.IsProduction())
 app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
 
+app.UseResponseCaching();
+app.UseHttpCacheHeaders();
 //app.UseAuthentication();
 app.UseAuthorization();
 
