@@ -18,7 +18,7 @@ public static class ExceptionMiddlewareExtensions
                 var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
                 if (contextFeature != null)
                 {
-                    ErrorResult result; // Just use your custom ErrorResult type directly
+                    ErrorResult result;
 
                     switch (contextFeature.Error)
                     {
