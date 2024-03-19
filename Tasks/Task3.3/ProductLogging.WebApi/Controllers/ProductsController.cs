@@ -11,7 +11,6 @@ namespace ProductLogging.WebApi.Controllers;
 [ApiController]
 public class ProductsController : ControllerBase
 {
-
     private readonly IProductService _productService;
     private readonly ILoggerService _logger;
 
@@ -32,7 +31,6 @@ public class ProductsController : ControllerBase
     [AllowAnonymous]
     public async Task<ActionResult<IEnumerable<ProductDto>>> GetProducts()
     {
-
         _logger.LogInfo("Fetching all products.");
         var products = await _productService.GetAllAsync();
 
@@ -57,8 +55,6 @@ public class ProductsController : ControllerBase
 
         _logger.LogInfo($"Fetched product with id: {id} successfully.");
         return product;
-
-
     }
 
     // POST: api/Products

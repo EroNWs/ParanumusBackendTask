@@ -1,10 +1,10 @@
 using ProductCatalogMinimalApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+
 var app = builder.Build();
 
 var products = new List<Product>();
-
 
 // Adding Product
 app.MapPost("/products", (Product product) =>
@@ -45,6 +45,7 @@ app.MapDelete("/products/{id}", (int id) =>
     }
     products.RemoveAt(index);
     return Results.NoContent();
+
 });
 
 app.Run();

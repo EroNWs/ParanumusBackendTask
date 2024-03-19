@@ -8,9 +8,7 @@ public class BookStoreDbContextFactory:IDesignTimeDbContextFactory<BookStoreDbCo
 {
 public BookStoreDbContext CreateDbContext(string[] args)
     {
-
         var configuration = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
-
         var builder = new DbContextOptionsBuilder<BookStoreDbContext>().UseSqlServer(configuration.GetConnectionString("ParanamusDbContext"), prj=>prj.MigrationsAssembly("BookStore.Dal"));
 
         return new BookStoreDbContext(builder.Options);

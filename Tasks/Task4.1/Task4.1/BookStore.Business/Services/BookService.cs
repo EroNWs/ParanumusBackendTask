@@ -16,9 +16,7 @@ public class BookService : IBookService
     public async Task<BookDto> AddBookAsync(BookCreateDto bookCreateDto)
     {
         var book = _mapper.Map<Book>(bookCreateDto);
-
         _repositoryManager.BookRepository.AddAsync(book);
-
         await _repositoryManager.SaveAsync();
 
         return _mapper.Map<BookDto>(book);
@@ -28,11 +26,9 @@ public class BookService : IBookService
     public async Task DeleteBookAsync(Guid id)
     {
         var book = await _repositoryManager.BookRepository.GetByIdAsync(id);
-
         if (book != null)
         {
             _repositoryManager.BookRepository.DeleteAsync(book);
-
             await _repositoryManager.SaveAsync();
         }
     }
@@ -40,7 +36,6 @@ public class BookService : IBookService
     public async Task<IEnumerable<BookListDto>> GetAllBooksAsync()
     {
         var books = await _repositoryManager.BookRepository.GetAllAsync();
-
         return _mapper.Map<IEnumerable<BookListDto>>(books);
 
     }
@@ -48,7 +43,6 @@ public class BookService : IBookService
     public async Task<BookDto> GetBookByIdAsync(Guid id)
     {
         var book = await _repositoryManager.BookRepository.GetByIdAsync(id);
-
         return book != null ? _mapper.Map<BookDto>(book) : null;
 
     }
@@ -56,17 +50,14 @@ public class BookService : IBookService
     public async Task<BookDto> UpdateBookAsync(Guid id, BookUpdateDto bookUpdateDto)
     {
         var book = await _repositoryManager.BookRepository.GetByIdAsync(id, tracking: true);
-
         if (book == null)
         {
             return null;
         }
 
         _mapper.Map(bookUpdateDto, book);
-
         _repositoryManager.BookRepository.UpdateAsync(book);
         await _repositoryManager.SaveAsync();
-
         return _mapper.Map<BookDto>(book);
     }
 }

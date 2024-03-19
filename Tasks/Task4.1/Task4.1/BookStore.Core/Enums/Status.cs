@@ -7,4 +7,5 @@ public enum Status
     Deleted = 4,
     Active = 3,
     Passive = 5
+
 }

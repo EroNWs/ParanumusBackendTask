@@ -13,6 +13,5 @@ namespace BookStore.WebApi.Extensions
             services.AddDbContext<BookStoreDbContext>(options =>
                 options.UseInMemoryDatabase("BookStoreDb"));
 
-
     }
 }

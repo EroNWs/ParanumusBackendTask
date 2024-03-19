@@ -14,7 +14,6 @@ LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nl
 builder.Services.AddDbContext<ProductLoggingDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ProductDb")));
 
 builder.Services.AddServiceExtensions();
-
 builder.Services.AddInfrastractureExtensions();
 
 builder.Services.AddControllers();
@@ -24,15 +23,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddAuthentication();
-
 builder.Services.ConfigureIdentity();
-
 builder.Services.ConfigureJWT(builder.Configuration);
 
 var app = builder.Build();
 
 var logger = app.Services.GetRequiredService<ILoggerService>();
-
 app.ConfigureExtceptionHandler(logger);
 // Configure the HTTP request pipeline. 
 

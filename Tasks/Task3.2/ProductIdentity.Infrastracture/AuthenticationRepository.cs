@@ -49,32 +49,24 @@ public class AuthenticationRepository : IAuthenticationRepository
     public async Task<IdentityResult> RegisterUser(User user, string password, List<string> roles)
     {
         var result = await _userManager.CreateAsync(user, password);
-
         if (result.Succeeded && roles != null)
         {
             foreach (var role in roles)
             {
-
                 if (!await _roleManager.RoleExistsAsync(role))
                 {
-
                     await _roleManager.CreateAsync(new IdentityRole(role));
                 }
-
                 await _userManager.AddToRoleAsync(user, role);
-
             }
         }
-
         return result;
     }
 
     public async Task<bool> AuthenticateAsync(UserAuthenticationDto userAuthenticationDto)
     {
         _user = await _userManager.FindByNameAsync(userAuthenticationDto.UserName);
-
         var result = (_user != null && await _userManager.CheckPasswordAsync(_user, userAuthenticationDto.Password));
-
         if (!result)
         {
             return false;
@@ -87,11 +79,8 @@ public class AuthenticationRepository : IAuthenticationRepository
     {
 
         var signinCredentials = GetSignInCredentials();
-
         var claims = await GetClaims();
-
         var tokenOptions = GenerateTokenOptions(signinCredentials, claims);
-
         return new JwtSecurityTokenHandler().WriteToken(tokenOptions);
 
     }
@@ -99,11 +88,8 @@ public class AuthenticationRepository : IAuthenticationRepository
     private SigningCredentials GetSignInCredentials()
     {
         var jwtSettings = _configuration.GetSection("Jwt");
-
         var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]);
-
         var secret = new SymmetricSecurityKey(key);
-
         return new SigningCredentials(secret, SecurityAlgorithms.HmacSha256);
 
     }
@@ -112,19 +98,14 @@ public class AuthenticationRepository : IAuthenticationRepository
     {
         var claims = new List<Claim>()
         {
-
             new Claim(ClaimTypes.Name, _user.UserName)
-
         };
-        var roles = await _userManager.GetRolesAsync(_user);
 
+        var roles = await _userManager.GetRolesAsync(_user);
         foreach (var role in roles)
         {
-
             claims.Add(new Claim(ClaimTypes.Role, role));
-
         }
-
         return claims;
     }
 
@@ -132,7 +113,6 @@ public class AuthenticationRepository : IAuthenticationRepository
     {
 
         var jwtSettings = _configuration.GetSection("Jwt");
-
         var tokenOptions = new JwtSecurityToken(
 
             issuer: jwtSettings["Issuer"],
@@ -142,7 +122,6 @@ public class AuthenticationRepository : IAuthenticationRepository
             signingCredentials: signingCredentials
 
             );
-
         return tokenOptions;
     }
 

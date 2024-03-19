@@ -14,7 +14,6 @@ LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nl
 builder.Services.AddDbContext<ProductPerformanceDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ProductDb")));
 
 builder.Services.AddServiceExtensions();
-
 builder.Services.AddInfrastractureExtensions();
 
 builder.Services.AddControllers(config =>
@@ -28,15 +27,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddAuthentication();
-
 builder.Services.ConfigureIdentity();
-
 builder.Services.ConfigureJWT(builder.Configuration);
 
 builder.Services.ConfigureResponseCaching();
-
 builder.Services.ConfigureHttpCacheHeaders();
-
 
 var app = builder.Build();
 
@@ -58,11 +53,9 @@ if (app.Environment.IsProduction())
 app.UseHttpsRedirection();
 
 app.UseResponseCaching();
-
 app.UseHttpCacheHeaders();
 
 app.UseAuthentication();
-
 app.UseAuthorization();
 
 app.MapControllers();

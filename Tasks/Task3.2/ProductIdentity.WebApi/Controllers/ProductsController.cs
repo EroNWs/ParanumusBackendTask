@@ -8,12 +8,9 @@ namespace ProductIdentity.WebApi.Controllers;
 public class ProductsController : ControllerBase
 {
     private readonly IProductRepository _productRepository;
-
     public ProductsController(IProductRepository productRepository)
     {
-
         _productRepository = productRepository;
-
     }
 
 
@@ -22,11 +19,8 @@ public class ProductsController : ControllerBase
     [AllowAnonymous]
     public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
     {
-
         var products = await _productRepository.GetAllAsync();
-
         return Ok(products);
-
     }
 
 
@@ -36,12 +30,9 @@ public class ProductsController : ControllerBase
     public async Task<ActionResult<Product>> GetProduct(int id)
     {
         var product = await _productRepository.GetByIdAsync(id);
-
         if (product is null)
         {
-
             return NotFound();
-
         }
 
         return product;
@@ -55,7 +46,6 @@ public class ProductsController : ControllerBase
     public async Task<ActionResult<Product>> PostProduct(Product product)
     {
         await _productRepository.AddAsync(product);
-
         return CreatedAtAction(nameof(GetProduct), new { id = product.Id }, product);
     }
 
@@ -67,13 +57,10 @@ public class ProductsController : ControllerBase
     {
         if (id != product.Id)
         {
-
             return BadRequest();
-
         }
 
         await _productRepository.UpdateAsync(product);
-
         return NoContent();
     }
 
@@ -84,16 +71,12 @@ public class ProductsController : ControllerBase
     public async Task<IActionResult> DeleteProduct(int id)
     {
         var product = await _productRepository.GetByIdAsync(id);
-
         if (product is null)
         {
-
             return NotFound();
-
         }
 
         await _productRepository.DeleteAsync(id);
-
         return NoContent();
     }
 }

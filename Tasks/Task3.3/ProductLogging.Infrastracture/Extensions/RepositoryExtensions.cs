@@ -14,20 +14,15 @@ public static class RepositoryExtensions
 {
     public static IServiceCollection AddInfrastractureExtensions(this IServiceCollection services)
     {
-
         services.AddScoped<IProductRepository, ProductRepository>();
-
         services.AddScoped<IAuthenticationRepository, AuthenticationRepository>();
-
         return services;
-
     }
+
     public static IServiceCollection ConfigureIdentity(this IServiceCollection services)
     {
-
         var builder = services.AddIdentity<User, IdentityRole>(opts =>
         {
-
             opts.Password.RequireDigit = true;
             opts.Password.RequireLowercase = false;
             opts.Password.RequireUppercase = false;
@@ -44,19 +39,15 @@ public static class RepositoryExtensions
 
     public static void ConfigureJWT(this IServiceCollection services, IConfiguration configuration)
     {
-
         var jwtSettings = configuration.GetSection("Jwt");
         var secretKey = jwtSettings["Key"];
 
-
         services.AddAuthentication(options =>
         {
-
             options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
             options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
         }).AddJwtBearer(options => options.TokenValidationParameters = new TokenValidationParameters
         {
-
             ValidateIssuer = true,
             ValidateAudience = true,
             ValidateLifetime = true,

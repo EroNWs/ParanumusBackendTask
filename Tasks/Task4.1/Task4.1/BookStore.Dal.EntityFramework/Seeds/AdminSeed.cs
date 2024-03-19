@@ -9,15 +9,13 @@ namespace BookStore.Dal.EntityFramework.Seeds;
 internal static class AdminSeed
 {
     private const string AdminEmail = "admin@paranamus.com";
-
     private const string AdminPassword = "Paranamus1!";
     public static async Task SeedAsync(IConfiguration configuration)
     {
         var dbContextBuilder = new DbContextOptionsBuilder<BookStoreDbContext>();
-
         dbContextBuilder.UseSqlServer(configuration.GetConnectionString(BookStoreDbContext.ConnectionName));
-
         using BookStoreDbContext context = new(dbContextBuilder.Options);
+
         if (!context.Roles.Any())
         {
             await AddRoles(context);
@@ -65,9 +63,7 @@ internal static class AdminSeed
         }
         else
         {
-
             Console.WriteLine("Admin Role not Found. Please Add Admin Roles!");
-
         }
 
     }

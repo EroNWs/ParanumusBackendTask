@@ -12,4 +12,5 @@ public class SuccessDataResult<T> : DataResult<T>, IDataResult<T> where T : clas
 
     public SuccessDataResult(T data, string message) : base(data, true, message)
     { }
+
 }

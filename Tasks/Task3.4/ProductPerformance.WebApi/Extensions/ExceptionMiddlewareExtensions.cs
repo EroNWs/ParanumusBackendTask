@@ -13,11 +13,8 @@ public static class ExceptionMiddlewareExtensions
         {
             appErr.Run(async context =>
             {
-
                 context.Response.ContentType = "application/json";
-
                 var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
-
                 if (contextFeature is not null)
                 {
                     context.Response.StatusCode = contextFeature.Error switch
@@ -27,11 +24,9 @@ public static class ExceptionMiddlewareExtensions
                     };
 
                     loggerService.LogError($"Something went wrong: {contextFeature.Error}");
-
                     await context.Response.WriteAsync(new ErrorDetails()
                     {
                         StatusCode = context.Response.StatusCode,
-
                         Message = contextFeature.Error.Message
 
                     }.ToString()

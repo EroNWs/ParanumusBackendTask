@@ -9,13 +9,10 @@ namespace ProductIdentity.WebApi.Controllers
     {   
         private readonly UserManager<User> _userManager;
         private readonly IAuthenticationRepository _authenticationRepository;
-
         public AccountController(UserManager<User> userManager, IAuthenticationRepository authenticationRepository)
         {
-
             _userManager = userManager;
             _authenticationRepository = authenticationRepository;
-
         }
 
         [HttpPost("register")]
@@ -28,7 +25,6 @@ namespace ProductIdentity.WebApi.Controllers
 
             var user = new User
             {
-
                 UserName = model.UserName,
                 Email = model.Email,
                 EmailConfirmed = model.EmailConfirmed,
@@ -43,24 +39,17 @@ namespace ProductIdentity.WebApi.Controllers
             };
 
             var result = await _authenticationRepository.RegisterUser(user, model.Password, model.Roles);
-
             if (!result.Succeeded)
             {
-
                 foreach (var error in result.Errors)
                 {
-
                     ModelState.TryAddModelError(error.Code, error.Description);
-
                 }
-
                 return BadRequest(ModelState);
 
             }
-
             return Ok(new { Message = "User registered successfully" });
         }
-
 
 
         [HttpPost("login")]
@@ -73,13 +62,9 @@ namespace ProductIdentity.WebApi.Controllers
             return Ok(
                 new
                 {
-
                     Token = await _authenticationRepository.CreateToken()
-
                 }) ;
-
         }
-
 
     }
 }

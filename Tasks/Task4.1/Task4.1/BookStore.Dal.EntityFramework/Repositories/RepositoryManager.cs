@@ -12,7 +12,6 @@ public class RepositoryManager:IRepositoryManager
 
     public RepositoryManager(BookStoreDbContext context)
     {
-
         _context= context;
         _adminRepository = new Lazy<IAdminRepository>(() => new AdminRepository(_context));
         _bookRepository = new Lazy<IBookRepository>(() => new BookRepository(_context));

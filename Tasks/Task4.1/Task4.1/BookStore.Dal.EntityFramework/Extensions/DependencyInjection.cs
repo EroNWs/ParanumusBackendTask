@@ -8,19 +8,13 @@ namespace BookStore.Dal.EntityFramework.Extensions;
 public static class DependencyInjection
 {
     public static IServiceCollection AddEFCoreServices(this IServiceCollection services, IConfiguration configuration)
-    {
-
-        services.AddScoped<IAdminRepository,AdminRepository>();
-
-        services.AddScoped<ICustomerRepository,CustomerRepository>();
-
-        services.AddScoped<IBookRepository,BookRepository>();
-
+    {    
+        services.AddScoped<IBookRepository, BookRepository>();
         services.AddScoped<IOrderRepository, OrderRepository>();
-
-        services.AddScoped<IRepositoryManager,RepositoryManager>();
-
+        services.AddScoped<IAdminRepository, AdminRepository>();
+        services.AddScoped<ICustomerRepository,CustomerRepository>();         
         services.AddScoped<IOrderDetailRepository, OrderDetailRepository>();
+        services.AddScoped<IRepositoryManager, RepositoryManager>();
 
         AdminSeed.SeedAsync(configuration).GetAwaiter().GetResult();
 

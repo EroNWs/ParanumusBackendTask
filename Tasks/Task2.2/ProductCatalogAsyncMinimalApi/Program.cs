@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using ProductCatalogAsyncMinimalApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+
 var app = builder.Build();
 
 var products = new List<Product>();

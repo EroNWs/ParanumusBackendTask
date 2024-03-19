@@ -23,20 +23,16 @@ public class AuthenticationService : IAuthenticationService
     public AuthenticationService(UserManager<User> userManager, IConfiguration configuration,
         IAuthenticationRepository authenticationRepository, IMapper mapper)
     {
-
         _userManager = userManager;
         _configuration = configuration;
         _authenticationRepository = authenticationRepository;
         _mapper = mapper;
-
     }
 
     public async Task<IdentityResult> RegisterUserAsync(RegisterUserDtos userRegistrationDto)
     {
         var user = _mapper.Map<User>(userRegistrationDto);
-
         return await _authenticationRepository.RegisterUser(user, userRegistrationDto.Password, userRegistrationDto.Roles);
-
     }
 
 
@@ -44,14 +40,12 @@ public class AuthenticationService : IAuthenticationService
     public async Task<bool> AuthenticateAsync(UserAuthenticationDto userLoginDto)
     {
         var user = await _authenticationRepository.AuthenticateAsync(userLoginDto);
-
         if (user is null)
         {
             return false;
         }
 
         _user = user;
-
         return true;
 
     }
@@ -61,7 +55,6 @@ public class AuthenticationService : IAuthenticationService
     {
         var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
         var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-
         var claims = new[]
         {
             new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
@@ -69,13 +62,11 @@ public class AuthenticationService : IAuthenticationService
         };
 
         var token = new JwtSecurityToken(
-
             issuer: _configuration["Jwt:Issuer"],
             audience: _configuration["Jwt:Audience"],
             claims: claims,
             expires: DateTime.Now.AddHours(1),
             signingCredentials: credentials
-
         );
 
         return new JwtSecurityTokenHandler().WriteToken(token);
@@ -83,10 +74,8 @@ public class AuthenticationService : IAuthenticationService
     }
 
 
-
     public async Task<string> CreateToken()
     {
-
         var signinCredentials = GetSignInCredentials();
         var claims = await GetClaims();
         var tokenOptions = GenerateTokenOptions(signinCredentials, claims);
@@ -95,18 +84,13 @@ public class AuthenticationService : IAuthenticationService
     }
 
 
-
     private SigningCredentials GetSignInCredentials()
     {
-
         var jwtSettings = _configuration.GetSection("Jwt");
         var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]);
         var secret = new SymmetricSecurityKey(key);
         return new SigningCredentials(secret, SecurityAlgorithms.HmacSha256);
-
     }
-
-
 
 
 
@@ -118,7 +102,6 @@ public class AuthenticationService : IAuthenticationService
         };
 
         var roles = await _userManager.GetRolesAsync(_user);
-
         foreach (var role in roles)
         {
             claims.Add(new Claim(ClaimTypes.Role, role));

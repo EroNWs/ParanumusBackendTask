@@ -28,21 +28,17 @@ public class PurchaseController : CustomBaseController
         if (!ModelState.IsValid)
         {
             var errors = ModelState.Values.SelectMany(x => x.Errors.Select(p => p.ErrorMessage)).ToList();
-
             _loggerService.LogWarning($"Validation failed: {string.Join(", ", errors)}");
-
             return CreateActionResultInstance(Response<NoContent>.Fail(ModelState.Values.SelectMany(x => x.Errors.Select(p => p.ErrorMessage)).ToList(), 400));
 
         }
 
         var requestId = Guid.NewGuid();
-
         _storeService.Add(requestId, orderRequest);
-
         var orderResponse = await _purchaseService.ProcessPurchaseAsync(orderRequest);
 
         _loggerService.LogInfo("Purchase processed successfully.");
-
         return CreateActionResultInstance(Response<OrderResponseDto>.Success(orderResponse, 200));
+
     }
 }

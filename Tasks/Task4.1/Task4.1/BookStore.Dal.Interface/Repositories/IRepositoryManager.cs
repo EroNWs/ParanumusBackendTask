@@ -2,18 +2,12 @@
 
 public interface IRepositoryManager
 {
-
     IAdminRepository AdminRepository { get; }
-
     IBookRepository BookRepository { get; }
-
-    ICustomerRepository CustomerRepository { get; }
-
     IOrderRepository OrderRepository { get; }
-
+    ICustomerRepository CustomerRepository { get; }
     IOrderDetailRepository OrderDetailRepository { get; }
 
     Task SaveAsync();
-
 
 }

@@ -13,14 +13,14 @@ namespace BookStore.Dal.Contexts;
 public class BookStoreDbContext : IdentityDbContext
 {
     public const string ConnectionName = "ParanamusDbContext";
-
     private readonly IHttpContextAccessor? _contextAccessor;
-
     public BookStoreDbContext(DbContextOptions<BookStoreDbContext> options, IHttpContextAccessor contextAccessor) : base(options)
     {
         _contextAccessor = contextAccessor;
     }
+
     public BookStoreDbContext(DbContextOptions<BookStoreDbContext> options) : base(options) { }
+
     public virtual DbSet<Admin> Admins { get; set; } = null!;
     public virtual DbSet<Book> Books { get; set; } = null!;
     public virtual DbSet<Customer> Customers { get; set; } = null!;

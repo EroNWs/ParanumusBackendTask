@@ -7,8 +7,6 @@ public static class AutoMapperExtension
 {
     public static void ConfigureAllDtoAutoMapper(this IServiceCollection services)
     {
-
         services.AddAutoMapper(typeof(BookProfile));
-
     }
 }

@@ -9,7 +9,6 @@ public abstract class AuditableEntity : BaseEntity, ISoftDeletableEntity
         DateCreated = DateTime.UtcNow;
     }
     public string? DeletedBy { get; set; }
-
     public DateTime? DeletedDate { get; set; }
     public DateTime? DateCreated { get; set; }
 }

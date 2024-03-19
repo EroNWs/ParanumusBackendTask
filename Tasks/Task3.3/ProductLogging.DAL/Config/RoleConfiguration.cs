@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-
 namespace ProductLogging.DAL.Config;
 
 public class RoleConfiguration : IEntityTypeConfiguration<IdentityRole>
@@ -17,7 +16,6 @@ public class RoleConfiguration : IEntityTypeConfiguration<IdentityRole>
                 NormalizedName = "ADMIN"
 
             }
-
-            );
+       );
     }
 }

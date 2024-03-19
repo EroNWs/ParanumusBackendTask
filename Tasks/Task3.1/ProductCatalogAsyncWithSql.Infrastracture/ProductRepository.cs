@@ -7,7 +7,6 @@ namespace ProductCatalogAsyncWithSql.Infrastracture;
 public class ProductRepository:IProductRepository
 {
     private readonly ProductCatalogDbContext _context;
-
     public ProductRepository(ProductCatalogDbContext context)
     {
         _context = context;
@@ -26,6 +25,7 @@ public class ProductRepository:IProductRepository
         {
             _context.Products.Remove(product);
             await _context.SaveChangesAsync();
+
         }
     }
 
