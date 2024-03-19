@@ -5,6 +5,7 @@ namespace ProductLogging.Application;
 
 public class LoggerManager : ILoggerService
 {
+
     private static readonly ILogger logger = LogManager.GetCurrentClassLogger();
 
     public void LogDebug(string message) => logger.Debug(message);

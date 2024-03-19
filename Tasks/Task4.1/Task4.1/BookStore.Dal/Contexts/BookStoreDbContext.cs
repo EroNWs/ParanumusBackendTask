@@ -13,7 +13,9 @@ namespace BookStore.Dal.Contexts;
 public class BookStoreDbContext : IdentityDbContext
 {
     public const string ConnectionName = "ParanamusDbContext";
+
     private readonly IHttpContextAccessor? _contextAccessor;
+
     public BookStoreDbContext(DbContextOptions<BookStoreDbContext> options, IHttpContextAccessor contextAccessor) : base(options)
     {
         _contextAccessor = contextAccessor;
@@ -30,11 +32,6 @@ public class BookStoreDbContext : IdentityDbContext
 
         base.OnModelCreating(builder);
     }
-    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    //{
-    //    optionsBuilder.UseInMemoryDatabase("BookStoreDb");
-    //}
-
 
     public override int SaveChanges()
     {
@@ -53,6 +50,7 @@ public class BookStoreDbContext : IdentityDbContext
         var entries = ChangeTracker.Entries<BaseEntity>();
 
         var userId = _contextAccessor?.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier) ?? "NotFound-User";
+
         foreach (var entry in entries)
         {
             SetIfAdded(entry, userId);
@@ -96,7 +94,6 @@ public class BookStoreDbContext : IdentityDbContext
         }
 
         entityEntry.State = EntityState.Modified;
-
         entity.Status = Status.Deleted;
         entity.DeletedBy = userId;
         entity.DeletedDate = DateTime.Now;

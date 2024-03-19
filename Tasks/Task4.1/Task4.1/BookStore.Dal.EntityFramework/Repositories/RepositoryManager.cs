@@ -12,12 +12,14 @@ public class RepositoryManager:IRepositoryManager
 
     public RepositoryManager(BookStoreDbContext context)
     {
+
         _context= context;
         _adminRepository = new Lazy<IAdminRepository>(() => new AdminRepository(_context));
         _bookRepository = new Lazy<IBookRepository>(() => new BookRepository(_context));
         _customersRepository = new Lazy<ICustomerRepository>(() => new CustomerRepository(_context));
         _ordersRepository = new Lazy<IOrderRepository>(() => new OrderRepository(_context));
         _ordersDetailRepository = new Lazy<IOrderDetailRepository> (()=> new OrderDetailRepository(_context));
+
     }
 
     public IAdminRepository AdminRepository => _adminRepository.Value;

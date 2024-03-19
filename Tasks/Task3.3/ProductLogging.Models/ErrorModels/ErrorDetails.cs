@@ -10,7 +10,9 @@ public class ErrorDetails
 
     public override string ToString()
     {
+
         return JsonSerializer.Serialize(this);
+
     }
 
 }

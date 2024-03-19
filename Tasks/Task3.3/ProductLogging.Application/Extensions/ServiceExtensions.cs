@@ -13,11 +13,17 @@ public static class ServiceExtensions
 
     public static IServiceCollection AddServiceExtensions(this IServiceCollection services)
     {
+
         services.AddScoped<IAuthenticationService, AuthenticationService>();
+
         services.AddScoped<IProductService, ProductService>();  
+
         services.AddSingleton<ILoggerService,LoggerManager>();
+
         services.AddAutoMapper(typeof(MappingProfile));
+
         return services;
+
     }
 }
 

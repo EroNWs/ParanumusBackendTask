@@ -11,4 +11,5 @@ public class Order: AuditableEntity
     public Customer Customer { get; set; }
 
     public ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
+
 }

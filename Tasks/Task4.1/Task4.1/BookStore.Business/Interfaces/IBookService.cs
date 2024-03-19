@@ -9,4 +9,5 @@ public interface IBookService
     Task<IEnumerable<BookListDto>> GetAllBooksAsync();
     Task<BookDto> UpdateBookAsync(Guid id, BookUpdateDto bookUpdateDto);
     Task DeleteBookAsync(Guid id);
+
 }

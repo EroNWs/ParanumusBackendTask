@@ -5,4 +5,5 @@ public interface IAdminRepository : IAsyncRepository, IAsyncDeleteableRepository
     IAsyncQueryableRepository<Admin>, IAsyncUpdateableRepository<Admin>
 {
     Task<Admin?> GetByIdentityIdAsync(string identityId);
+
 }

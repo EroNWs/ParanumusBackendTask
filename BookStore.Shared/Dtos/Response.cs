@@ -8,6 +8,7 @@ public class Response<T>
 
     [JsonIgnore]
     public short StatusCode { get; private set; }
+
     [JsonIgnore]
     public bool IsSuccessful { get; private set; }
 

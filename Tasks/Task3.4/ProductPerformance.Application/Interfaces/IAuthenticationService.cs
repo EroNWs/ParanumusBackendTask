@@ -10,4 +10,5 @@ public interface IAuthenticationService
     Task<string> GenerateJwtToken(User user);
     Task<bool> AuthenticateAsync(UserAuthenticationDto userLoginDto);
     Task<IdentityResult> RegisterUserAsync(RegisterUserDtos userRegistrationDto);
+
 }

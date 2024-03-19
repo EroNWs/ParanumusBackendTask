@@ -14,9 +14,13 @@ public class PurchaseService : IPurchaseService
 
     public async Task<OrderResponseDto> ProcessPurchaseAsync(OrderRequestDto request)
     {
+
         var customer = await _repositoryManager.CustomerRepository.GetByIdAsync(request.CustomerId);
+
         var discountRate = CalculateDiscount(customer);
+
         double originalPrice = 0.0;
+
         List<OrderDetail> orderDetailsList = new List<OrderDetail>();
 
         foreach (var bookOrder in request.Books)
@@ -95,7 +99,9 @@ public class PurchaseService : IPurchaseService
 
     private async Task UpdateCustomerRoleBasedOnSpending(Guid customerId)
     {
+
         var customer = await _repositoryManager.CustomerRepository.GetByIdAsync(customerId);
+
         if (customer is null) return;
 
         var firstDayOfLastMonth = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).AddMonths(-1);

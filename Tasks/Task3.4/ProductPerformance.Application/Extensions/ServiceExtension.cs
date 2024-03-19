@@ -14,23 +14,33 @@ public static class ServiceExtension
 
     public static IServiceCollection AddServiceExtensions(this IServiceCollection services)
     {
+
         services.AddScoped<IAuthenticationService, AuthenticationService>();
+
         services.AddScoped<IProductService, ProductService>();
+
         services.AddSingleton<ILoggerService, LoggerManager>();
+
         services.AddAutoMapper(typeof(MappingProfile));
+
         return services;
+
     }
 
     public static void ConfigureResponseCaching(this IServiceCollection services) => services.AddResponseCaching();
 
     public static void ConfigureHttpCacheHeaders(this IServiceCollection services)=> services.AddHttpCacheHeaders(expirationOptions =>
     {
+
         expirationOptions.MaxAge = 70;
         expirationOptions.CacheLocation = CacheLocation.Private;
+
     },
         validatonOptions =>
         {
+
             validatonOptions.MustRevalidate = false;
+
         }
     );
 }

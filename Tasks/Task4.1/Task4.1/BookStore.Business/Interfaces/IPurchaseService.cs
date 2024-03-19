@@ -5,4 +5,5 @@ namespace BookStore.Business.Interfaces;
 public interface IPurchaseService
 {
     Task<OrderResponseDto> ProcessPurchaseAsync(OrderRequestDto request);
+
 }

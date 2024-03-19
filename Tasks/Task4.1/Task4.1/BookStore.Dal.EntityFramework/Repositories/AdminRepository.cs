@@ -9,5 +9,7 @@ public class AdminRepository : EFBaseRepository<Admin>, IAdminRepository
     public Task<Admin?> GetByIdentityIdAsync(string identityId)
     {
         return _table.FirstOrDefaultAsync(x => x.IdentityId == identityId);
+
     }
+
 }

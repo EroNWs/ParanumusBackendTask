@@ -10,4 +10,5 @@ public interface IAuthenticationRepository
     Task<User> FindByNameAsync(string userName);
 
     Task<User?> AuthenticateAsync(UserAuthenticationDto userAuthenticationDto);
+
 }

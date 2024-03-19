@@ -13,19 +13,21 @@ public static class RepositoryExtensions
     {
         services.AddScoped<IProductRepository, ProductRepository>();
         services.AddScoped<IAuthenticationRepository, AuthenticationRepository>();
-       
+
         return services;
     }
     public static IServiceCollection ConfigureIdentity(this IServiceCollection services)
     {
         var builder = services.AddIdentity<User, IdentityRole>(opts =>
         {
+
             opts.Password.RequireDigit = true;
             opts.Password.RequireLowercase = false;
             opts.Password.RequireUppercase = false;
             opts.Password.RequireNonAlphanumeric = false;
             opts.Password.RequiredLength = 6;
             opts.User.RequireUniqueEmail = true;
+
         })
         .AddEntityFrameworkStores<ProductIdentityDbContext>()
         .AddDefaultTokenProviders();
@@ -33,23 +35,27 @@ public static class RepositoryExtensions
         return services;
     }
 
-    public static void ConfigureJWT(this IServiceCollection services,IConfiguration configuration)
+    public static void ConfigureJWT(this IServiceCollection services, IConfiguration configuration)
     {
         var jwtSettings = configuration.GetSection("Jwt");
+
         var secretKey = jwtSettings["Key"];
 
         services.AddAuthentication(options =>
         {
+
             options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
             options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-        }).AddJwtBearer(options =>options.TokenValidationParameters = new TokenValidationParameters
+
+        }).AddJwtBearer(options => options.TokenValidationParameters = new TokenValidationParameters
         {
-      ValidateIssuer = true,
-      ValidateAudience = true,
-      ValidateLifetime = true,
-      ValidIssuer = jwtSettings["Issuer"],
-      ValidAudience = jwtSettings["Audience"],
-      IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
+
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidIssuer = jwtSettings["Issuer"],
+            ValidAudience = jwtSettings["Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
 
         });
     }

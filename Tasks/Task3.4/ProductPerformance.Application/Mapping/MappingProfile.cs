@@ -8,6 +8,7 @@ public class MappingProfile:Profile
 {
     public MappingProfile()
     {
+
         CreateMap<RegisterUserDtos, User>()
             .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.UserName))
             .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
@@ -23,6 +24,8 @@ public class MappingProfile:Profile
         CreateMap<UserAuthenticationDto, UserLogin>().ReverseMap();
 
         CreateMap<ProductCreateDto, Product>().ReverseMap();
+
         CreateMap<ProductDto, Product>().ReverseMap();  
+
     }
 }

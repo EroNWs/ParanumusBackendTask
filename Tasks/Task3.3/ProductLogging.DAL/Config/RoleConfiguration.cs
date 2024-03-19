@@ -12,8 +12,10 @@ public class RoleConfiguration : IEntityTypeConfiguration<IdentityRole>
         builder.HasData(
             new IdentityRole
             {
+
                 Name = "Admin",
                 NormalizedName = "ADMIN"
+
             }
 
             );

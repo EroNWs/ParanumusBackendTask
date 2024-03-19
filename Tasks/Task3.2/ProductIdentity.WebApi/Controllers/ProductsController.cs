@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 
 namespace ProductIdentity.WebApi.Controllers;
 
@@ -12,17 +11,24 @@ public class ProductsController : ControllerBase
 
     public ProductsController(IProductRepository productRepository)
     {
+
         _productRepository = productRepository;
+
     }
+
 
     // GET: api/Products
     [HttpGet]
     [AllowAnonymous]
     public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
     {
+
         var products = await _productRepository.GetAllAsync();
+
         return Ok(products);
+
     }
+
 
     // GET: api/Products/5
     [HttpGet("{id}")]
@@ -33,11 +39,15 @@ public class ProductsController : ControllerBase
 
         if (product is null)
         {
+
             return NotFound();
+
         }
 
         return product;
+
     }
+
 
     // POST: api/Products
     [HttpPost]
@@ -49,6 +59,7 @@ public class ProductsController : ControllerBase
         return CreatedAtAction(nameof(GetProduct), new { id = product.Id }, product);
     }
 
+
     // PUT: api/Products/5
     [HttpPut("{id}")]
     [Authorize]
@@ -56,7 +67,9 @@ public class ProductsController : ControllerBase
     {
         if (id != product.Id)
         {
+
             return BadRequest();
+
         }
 
         await _productRepository.UpdateAsync(product);
@@ -64,15 +77,19 @@ public class ProductsController : ControllerBase
         return NoContent();
     }
 
+
     // DELETE: api/Products/5
     [HttpDelete("{id}")]
     [Authorize]
     public async Task<IActionResult> DeleteProduct(int id)
     {
         var product = await _productRepository.GetByIdAsync(id);
+
         if (product is null)
         {
+
             return NotFound();
+
         }
 
         await _productRepository.DeleteAsync(id);

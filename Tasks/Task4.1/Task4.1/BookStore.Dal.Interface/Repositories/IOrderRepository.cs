@@ -7,4 +7,5 @@ public interface IOrderRepository : IAsyncRepository, IAsyncDeleteableRepository
     IAsyncQueryableRepository<Order>, IAsyncUpdateableRepository<Order>
 {
     Task<decimal> SumAsync(Expression<Func<Order, bool>> predicate, Expression<Func<Order, decimal>> selector);
+
 }
