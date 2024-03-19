@@ -49,7 +49,7 @@ Hello World
 
 # CalculateAverage Minimal API
 
-The CalculateAverage Minimal API is a simple yet powerful .NET 6 web application designed to demonstrate a clean and efficient implementation of a web service that calculates the average value of a series of integers. It showcases error handling, input validation, and the elegance of Minimal APIs in ASP.NET Core.
+The CalculateAverage Minimal API is a simple yet powerful .NET 7 web application designed to demonstrate a clean and efficient implementation of a web service that calculates the average value of a series of integers. It showcases error handling, input validation, and the elegance of Minimal APIs in ASP.NET Core.
 
 ## Features
 
@@ -255,7 +255,7 @@ This project adopts a clean layered architecture to enhance separation of concer
 
 ### Prerequisites
 
-- .NET 6 SDK
+- .NET 6 SDK or later
 - SQL Server (LocalDB, Express, or any suitable edition)
 
 ### Installation
@@ -274,8 +274,8 @@ This project includes comprehensive Postman documentation to simplify interactin
 
 1. Download and install [Postman](https://www.postman.com/downloads/) if you haven't already.
 2. Access our Postman documentation and collection via the following link:
-  https://api.postman.com/collections/28694420-7f99e19e-87cd-4fce-98db-b26bb3ed14fd?access_key=PMAT-01HS826TDX9KEN7052DKVRRCC5
-3. Import the collection into Postman using the **Import** button.
+https://api.postman.com/collections/28694420-7f99e19e-87cd-4fce-98db-b26bb3ed14fd?access_key=PMAT-01HS826TDX9KEN7052DKVRRCC5
+4. Import the collection into Postman using the **Import** button.
 
 ### Using the Collection
 
@@ -345,7 +345,7 @@ This project includes comprehensive Postman documentation to simplify interactin
 
 1. Download and install [Postman](https://www.postman.com/downloads/) if you haven't already.
 2. Access our Postman documentation and collection via the following link:
-  https://api.postman.com/collections/28694420-7f99e19e-87cd-4fce-98db-b26bb3ed14fd?access_key=PMAT-01HS826TDX9KEN7052DKVRRCC5
+https://api.postman.com/collections/28694420-7f99e19e-87cd-4fce-98db-b26bb3ed14fd?access_key=PMAT-01HS826TDX9KEN7052DKVRRCC5
 3. Import the collection into Postman using the **Import** button.
 
 ### Using the Collection
@@ -412,7 +412,7 @@ This project includes comprehensive Postman documentation to simplify interactin
 
 1. Download and install [Postman](https://www.postman.com/downloads/) if you haven't already.
 2. Access our Postman documentation and collection via the following link:
-  https://api.postman.com/collections/28694420-7f99e19e-87cd-4fce-98db-b26bb3ed14fd?access_key=PMAT-01HS826TDX9KEN7052DKVRRCC5
+https://api.postman.com/collections/28694420-7f99e19e-87cd-4fce-98db-b26bb3ed14fd?access_key=PMAT-01HS826TDX9KEN7052DKVRRCC5
 3. Import the collection into Postman using the **Import** button.
 
 ### Using the Collection
@@ -503,7 +503,7 @@ This project includes comprehensive Postman documentation to simplify interactin
 
 1. Download and install [Postman](https://www.postman.com/downloads/) if you haven't already.
 2. Access our Postman documentation and collection via the following link:
-  https://api.postman.com/collections/28694420-7f99e19e-87cd-4fce-98db-b26bb3ed14fd?access_key=PMAT-01HS826TDX9KEN7052DKVRRCC5
+https://api.postman.com/collections/28694420-7f99e19e-87cd-4fce-98db-b26bb3ed14fd?access_key=PMAT-01HS826TDX9KEN7052DKVRRCC5
 3. Import the collection into Postman using the **Import** button.
 
 ### Using the Collection
@@ -568,6 +568,17 @@ dotnet run
 - **Create a Book:** POST `/api/books`
 - **Update a Book:** PUT `/api/books/{id}`
 - **Delete a Book:** DELETE `/api/books/{id}`
+
+  ## API Usage with Postman
+
+This project includes comprehensive Postman documentation to simplify interacting with the API, making it easier to test authentication, CRUD operations, and other functionalities.
+
+### Accessing the Postman Collection
+
+1. Download and install [Postman](https://www.postman.com/downloads/) if you haven't already.
+2. Access our Postman documentation and collection via the following link:
+https://api.postman.com/collections/28694420-7f99e19e-87cd-4fce-98db-b26bb3ed14fd?access_key=PMAT-01HS826TDX9KEN7052DKVRRCC5
+3. Import the collection into Postman using the **Import** button.
 
 ## Part 5: Advanced C# and Software Design
 
