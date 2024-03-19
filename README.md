@@ -527,5 +527,70 @@ To perform operations that require authentication:
 
 
 
+---------------------------------------------------------------------------------------------------------------
+
+## Part 4: Business Scenario Implementation
+
+The bookstore API includes a loyalty program with discounts for different types of customers and requires the implementation of customer classification, purchase processing, discount application, and record-keeping.
+
+### Features
+
+- **Customer Classification:** Dynamically categorize customers based on their purchase history and apply appropriate discounts.
+- **Purchase Processing:** Implement an endpoint to process book purchases, including customer information and book quantities.
+- **Discount Application:** Apply discounts based on customer classification during the purchase process.
+- **Record Keeping:** Maintain a record of all purchases for future customer classification and analysis.
+
+### Getting Started
+
+1. **Clone the Project:**
+
+```bash
+git clone https://github.com/EroNWs/ParanumusBackendTask.git
+```
+
+2. **Navigate to the Bookstore API Directory:**
+
+```bash
+cd ParanumusBackendTask/BookstoreApi project location
+```
+
+3. **Run the Application:**
+
+```bash
+dotnet run
+```
+
+### API Endpoints
+
+- **Purchase Books:** POST `/api/purchase/make-purchase`
+- **List All Books:** GET `/api/books`
+- **Get Book by ID:** GET `/api/books/{id}`
+- **Create a Book:** POST `/api/books`
+- **Update a Book:** PUT `/api/books/{id}`
+- **Delete a Book:** DELETE `/api/books/{id}`
+
+## Part 5: Advanced C# and Software Design
+
+This part delves into advanced C# features and software design patterns to enhance the project's architecture, maintainability, and testability. Key areas include dependency injection, unit testing, and integrating services.
+
+### Highlights
+
+- **Dependency Injection:** Refactor the project to use dependency injection for better scalability and decoupling.
+- **Unit Testing:** Implement unit tests for critical components to ensure reliability and functionality.
+- **Service Integration:** Develop and integrate services for functionalities like email notification, payment processing, etc.
+
+### Running Tests
+
+1. **Navigate to the Test Directory:**
+
+```bash
+cd ParanumusBackendTask/Tests project location
+```
+
+2. **Execute the Tests:**
+
+```bash
+dotnet test
+```
 
 
