@@ -1,6 +1,8 @@
-﻿using BookStore.Business.Interfaces;
+﻿using BookStore.Business.Constants;
+using BookStore.Business.Interfaces;
 using BookStore.Dtos.Books;
 using BookStore.Shared.BaseController;
+using BookStore.Shared.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookStore.WebApi.Controllers;
@@ -21,11 +23,12 @@ public class BooksController : CustomBaseController
     {
         if (!ModelState.IsValid)
         {
-            return BadRequest(ModelState);
+            var errors = ModelState.Values.SelectMany(v => v.Errors.Select(e => e.ErrorMessage));
+            return BadRequest(Response<NoContent>.Fail(errors.ToList(), 400));
         }
 
         var createdBook = await _bookService.AddBookAsync(bookCreateDto);
-        return CreatedAtAction(nameof(GetBook), new { id = createdBook.Id }, createdBook);
+        return CreatedAtAction(nameof(GetBook), new { id = createdBook.Id }, Response<BookDto>.Success(createdBook, 201));
     }
 
     [HttpGet("{id}")]
@@ -34,16 +37,16 @@ public class BooksController : CustomBaseController
         var book = await _bookService.GetBookByIdAsync(id);
         if (book is null)
         {
-            return NotFound();
+            return NotFound(Response<NoContent>.Fail(Messages.BookNotFound, 404));
         }
-        return Ok(book);
+        return Ok(Response<BookDto>.Success(book, 200));
     }
 
     [HttpGet]
     public async Task<IActionResult> GetAllBooks()
     {
         var books = await _bookService.GetAllBooksAsync();
-        return Ok(books);
+        return Ok(Response<IEnumerable<BookListDto>>.Success(books, 200));
     }
 
     [HttpPut("{id}")]
@@ -51,21 +54,22 @@ public class BooksController : CustomBaseController
     {
         if (!ModelState.IsValid)
         {
-            return BadRequest(ModelState);
+            var errors = ModelState.Values.SelectMany(v => v.Errors.Select(e => e.ErrorMessage));
+            return BadRequest(Response<NoContent>.Fail(errors.ToList(), 400));
         }
 
         var updatedBook = await _bookService.UpdateBookAsync(id, bookUpdateDto);
         if (updatedBook is null)
         {
-            return NotFound();
+            return NotFound(Response<NoContent>.Fail(Messages.BookNotFound, 404));
         }
-        return Ok(updatedBook);
+        return Ok(Response<BookDto>.Success(updatedBook, 200));
     }
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteBook(Guid id)
     {
         await _bookService.DeleteBookAsync(id);
-        return NoContent();
+        return CreateActionResultInstance(Response<NoContent>.Success(204));
     }
 }

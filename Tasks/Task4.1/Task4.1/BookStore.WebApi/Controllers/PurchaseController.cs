@@ -1,4 +1,5 @@
-﻿using BookStore.Business.Interfaces;
+﻿using BookStore.Business.Constants;
+using BookStore.Business.Interfaces;
 using BookStore.Dtos.Orders;
 using BookStore.Shared.BaseController;
 using BookStore.Shared.Dtos;
@@ -37,7 +38,7 @@ public class PurchaseController : CustomBaseController
         }
         catch (Exception ex)
         {
-            return CreateActionResultInstance(Response<NoContent>.Fail("Internal server error", 500));
+            return CreateActionResultInstance(Response<NoContent>.Fail(Messages.InternalServerError, 500));
         }
     }
 }

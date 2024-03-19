@@ -2,6 +2,10 @@
 
 public class Messages
 {
+    public const string BookNotFound = "Book Not Found";
+
+    public const string InternalServerError = "Internal Server Error";
+
     public const string ListedSuccess = "Listed_Success";
     public const string ListReceived = "List_Received";
     public const string ListNotReceived = "List_Not_Received";
@@ -20,7 +24,6 @@ public class Messages
     public const string UpdateSuccess = "Update_Success";
     public const string UpdateFail = "Update_Fail";
 
-    public const string DeleteSuccess = "Silme İşlemi Başarılı";
     public const string DeleteFail = "Delete_Fail";
     public const string DeleteSuccessRedirect = "Delete_Success_Redirect";
 
@@ -28,6 +31,7 @@ public class Messages
     public const string EmailFoundSuccess = "Email_Found_Success";
 
     public const string NullData = "Data_Not_Found";
+
 
 
 }
