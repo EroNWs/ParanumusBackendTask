@@ -28,7 +28,7 @@ public class PurchaseController : CustomBaseController
             return CreateActionResultInstance(Response<NoContent>.Fail(ModelState.Values.SelectMany(x => x.Errors.Select(p => p.ErrorMessage)).ToList(), 400));
         }
 
-        var requestId = Guid.NewGuid().ToString();
+        var requestId = Guid.NewGuid();
         _storeService.Add(requestId, orderRequest);
 
         try

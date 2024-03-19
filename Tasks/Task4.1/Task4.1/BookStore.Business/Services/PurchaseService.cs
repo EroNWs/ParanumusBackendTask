@@ -15,11 +15,10 @@ public class PurchaseService : IPurchaseService
     public async Task<OrderResponseDto> ProcessPurchaseAsync(OrderRequestDto request)
     {
         var customer = await _repositoryManager.CustomerRepository.GetByIdAsync(request.CustomerId);
-
         var discountRate = CalculateDiscount(customer);
-
         double originalPrice = 0.0;
         List<OrderDetail> orderDetailsList = new List<OrderDetail>();
+
         foreach (var bookOrder in request.Books)
         {
             var book = await _repositoryManager.BookRepository.GetByIdAsync(bookOrder.BookId);
@@ -36,18 +35,19 @@ public class PurchaseService : IPurchaseService
                     Count = bookOrder.Count
 
                 };
+
                 orderDetailsList.Add(orderDetail);
+
                 await _repositoryManager.OrderDetailRepository.AddAsync(orderDetail);
                 await _repositoryManager.OrderDetailRepository.SaveChangesAsync();
 
                 originalPrice += book.ListPrice * bookOrder.Count;
+
             }
         }
 
 
-
         var discountAmount = originalPrice * discountRate;
-
         var finalPrice = originalPrice - discountAmount;
 
 
@@ -64,11 +64,9 @@ public class PurchaseService : IPurchaseService
 
 
         await _repositoryManager.OrderRepository.AddAsync(order);
-        await _repositoryManager.OrderRepository.SaveChangesAsync();
-
-
-
+        await _repositoryManager.OrderRepository.SaveChangesAsync();        
         await UpdateCustomerRoleBasedOnSpending(request.CustomerId);
+
 
         return new OrderResponseDto
         {
@@ -93,10 +91,12 @@ public class PurchaseService : IPurchaseService
         }
     }
 
+
+
     private async Task UpdateCustomerRoleBasedOnSpending(Guid customerId)
     {
         var customer = await _repositoryManager.CustomerRepository.GetByIdAsync(customerId);
-        if (customer == null) return;
+        if (customer is null) return;
 
         var firstDayOfLastMonth = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).AddMonths(-1);
         var lastDayOfLastMonth = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).AddDays(-1);
@@ -113,6 +113,7 @@ public class PurchaseService : IPurchaseService
             await _repositoryManager.CustomerRepository.UpdateAsync(customer);
         }
     }
+
 
 
 }

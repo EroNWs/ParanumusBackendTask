@@ -54,7 +54,7 @@ public class PurchaseControllerTests
         var okResult = Assert.IsType<OkObjectResult>(result);
         var returnedOrderResponse = Assert.IsType<OrderResponseDto>(okResult.Value);
         Assert.Equal(orderResponse.FinalPrice, returnedOrderResponse.FinalPrice);
-        _mockStoreService.Verify(service => service.Add(It.IsAny<string>(), It.IsAny<OrderRequestDto>()), Times.Once);
+        _mockStoreService.Verify(service => service.Add(It.IsAny<Guid>(), It.IsAny<OrderRequestDto>()), Times.Once);
     }
 
     [Fact]

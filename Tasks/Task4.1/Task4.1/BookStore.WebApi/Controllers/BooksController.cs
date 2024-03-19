@@ -12,10 +12,11 @@ namespace BookStore.WebApi.Controllers;
 public class BooksController : CustomBaseController
 {
     private readonly IBookService _bookService;
-
-    public BooksController(IBookService bookService)
+    private readonly IInMemoryDataStoreService _storeService;
+    public BooksController(IBookService bookService, IInMemoryDataStoreService storeService)
     {
         _bookService = bookService;
+        _storeService = storeService;
     }
 
     [HttpPost]
